@@ -1,5 +1,6 @@
 ---
 title: 测试文章
+author: tomyi
 slug: test-post
 description: 这是一个测试文章
 tags: [test, demo]

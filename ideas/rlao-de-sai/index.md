@@ -1,4 +1,5 @@
 ---
+category_id: 019c1d53-c95e-755d-b825-6e9092b67f68
 excerpt: 欢迎来到强化学习的奇妙世界！探索从 MDP 基础到前沿算法的完整学习路径，理论与实践相结合。
 hidden: false
 order: 1

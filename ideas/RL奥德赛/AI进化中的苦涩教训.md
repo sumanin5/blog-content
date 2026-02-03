@@ -1,18 +1,27 @@
 ---
-title: "AI 进化论：一部‘苦涩教训’的宏大叙事"
-meta_title: "AI 演化史深度解析：从人类经验的退场到算力逻辑的接管"
-meta_description: "从感知机到 GPT-4，AI 的每一次质变本质上都是对人类直觉的背叛。本文解析 AI 发展史上关于‘苦涩教训’的宏大叙事。"
-slug: grand-narrative-of-ai-bitter-lesson
-status: published
+allow_comments: true
 author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: rlao-de-sai
+category_id: 019c21dc-4f75-7cba-9cd6-18404be2b65d
+date: '2026-02-03 14:26:09'
+enable_jsx: false
 is_featured: true
-summary: "理查德·萨顿的《苦涩的教训》并非偶然的预言，而是 AI 全球演化的必然逻辑。本文纵览感知机、特征工程、CNN、GAN 等技术的起伏，揭示了 AI 进化的终极法则：去掉人为设计的偏见，拥抱可大规模扩展的计算。这是一场人类从‘造物主’向‘点火者’身份转换的宏大进程。"
+meta_description: 从感知机到 GPT-4，AI 的每一次质变本质上都是对人类直觉的背叛。本文解析 AI 发展史上关于‘苦涩教训’的宏大叙事。
+meta_keywords: ''
+meta_title: AI 演化史深度解析：从人类经验的退场到算力逻辑的接管
+slug: grand-narrative-of-ai-bitter-lesson-p29jer
+status: published
+summary: 理查德·萨顿的《苦涩的教训》并非偶然的预言，而是 AI 全球演化的必然逻辑。本文纵览感知机、特征工程、CNN、GAN 等技术的起伏，揭示了 AI
+  进化的终极法则：去掉人为设计的偏见，拥抱可大规模扩展的计算。这是一场人类从‘造物主’向‘点火者’身份转换的宏大进程。
 tags:
-  - AI演化史
-  - 技术哲学
-  - 苦涩的教训
-  - 架构偏见
-  - 大语言模型
+- AI演化史
+- 技术哲学
+- 苦涩的教训
+- 架构偏见
+- 大语言模型
+title: AI 进化论：一部‘苦涩教训’的宏大叙事
+use_server_rendering: true
 ---
 
 # AI 进化论：一部‘苦涩教训’的宏大叙事

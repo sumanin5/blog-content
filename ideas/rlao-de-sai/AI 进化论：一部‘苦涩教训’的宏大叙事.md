@@ -1,11 +1,9 @@
 ---
 allow_comments: true
-author: tomyi
 author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
-category: rlao-de-sai
 category_id: 019c21dc-4f75-7cba-9cd6-18404be2b65d
 date: '2026-02-03 14:26:09'
-enable_jsx: true
+enable_jsx: false
 is_featured: true
 meta_description: 从感知机到 GPT-4，AI 的每一次质变本质上都是对人类直觉的背叛。本文解析 AI 发展史上关于‘苦涩教训’的宏大叙事。
 meta_keywords: ''

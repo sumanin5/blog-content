@@ -1,11 +1,11 @@
 ---
-category_id: 019c1e6c-d987-7b50-bd65-84f64ca7251a
+category_id: 019c21dc-4f75-7cba-9cd6-18404be2b65d
 cover: ./media/rl_odyssey_cover.png
-cover_media_id: 019c1e6c-d9d8-7ceb-9cba-989ab1c49dc5
+cover_media_id: 019c21dc-5055-7539-8e57-9b3c5912bfa8
 excerpt: 本专栏不仅仅关注算法推导，更致力于探讨强化学习背后的哲学隐喻——关于主体性、奖励假说以及在不确定性中寻找最优策略的生存智慧。
 hidden: false
 icon: ./media/icon.svg
-icon_id: 019c1e6c-d9b3-7ac6-8165-f96b6e97a5cd
+icon_id: 019c21dc-5033-7c50-a2b3-2068c2269dcc
 title: RL奥德赛
 ---
 

@@ -1,0 +1,16 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="50" y="50" width="700" height="400" fill="none" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="80" y="100" font-family="sans-serif" font-size="24" font-weight="bold" fill="#333">考试：自然语言理解 (BERT)</text>
+  <line x1="80" y1="115" x2="720" y2="115" stroke="#333" stroke-width="2"/>
+
+  <text x="100" y="200" font-family="serif" font-size="20" fill="#444">1. 萨顿提出的“苦涩教训”认为，长期来看，___________ 才是</text>
+  <text x="100" y="240" font-family="serif" font-size="20" fill="#444">智能进化的核心驱动力，而人类设计的智巧往往会随时间失效。</text>
+
+  <line x1="285" y1="205" x2="485" y2="205" stroke="#007bff" stroke-width="2"/>
+
+  <text x="100" y="320" font-family="serif" font-size="18" fill="#888">（请根据上下文逻辑填入最符合语义的词项）</text>
+
+  <rect x="650" y="70" width="100" height="40" rx="5" fill="#f8f9fa" stroke="#ccc"/>
+  <text x="665" y="95" font-family="sans-serif" font-size="16" fill="#666">分值：10</text>
+</svg>

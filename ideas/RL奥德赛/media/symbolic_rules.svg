@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0a192f" />
+
+  <!-- Grid Lines (Subtle) -->
+  <g stroke="#112240" stroke-width="1">
+    <path d="M0 50 L800 50 M0 100 L800 100 M0 150 L800 150 M0 200 L800 200 M0 250 L800 250 M0 300 L800 300 M0 350 L800 350" />
+    <path d="M50 0 L50 400 M100 0 L100 400 M150 0 L150 400 M200 0 L200 400 M250 0 L250 400 M300 0 L300 400 M350 0 L350 400 M400 0 L400 400 M450 0 L450 400 M500 0 L500 400 M550 0 L550 400 M600 0 L600 400 M650 0 L650 400 M700 0 L700 400 M750 0 L750 400" />
+  </g>
+
+  <!-- Symbolic Nodes -->
+  <g fill="none" stroke="#64ffda" stroke-width="1.5">
+    <!-- Logic Gate Symbol -->
+    <path d="M100 150 Q130 150 140 180 Q130 210 100 210 L100 150 Z" />
+    <circle cx="150" cy="180" r="5" />
+
+    <!-- Blueprint Boxes -->
+    <rect x="300" y="50" width="200" height="80" rx="4" stroke-dasharray="5,5" />
+    <rect x="550" y="200" width="180" height="120" rx="4" />
+  </g>
+
+  <!-- Mathematical Formulas & Logic -->
+  <g fill="#64ffda" font-family="Monospace, Courier New" font-size="22">
+    <!-- Physical Laws -->
+    <text x="320" y="85" font-style="italic">F = m &#183; a</text>
+    <text x="320" y="115" font-style="italic">E = mc&#178;</text>
+    <text x="570" y="240">&#8711; &#215; B = &#956;&#8320;J</text>
+    <text x="570" y="280"> &#8747; e^x dx </text>
+
+    <!-- Logic Operations -->
+    <text x="80" y="250" font-size="18">IF (P &#8743; Q)</text>
+    <text x="80" y="280" font-size="18">THEN R</text>
+    <text x="80" y="310" font-size="18">&#8704;x &#8707;y P(x,y)</text>
+
+    <!-- Symbols scattered -->
+    <text x="600" y="80" font-size="40" opacity="0.3">&#931;</text>
+    <text x="200" y="350" font-size="40" opacity="0.3">&#955;</text>
+    <text x="450" y="350" font-size="40" opacity="0.3">&#8734;</text>
+    <text x="400" y="220" font-size="30">&#172;A &#8744; B</text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <g stroke="#64ffda" stroke-width="1" opacity="0.5">
+    <line x1="155" y1="180" x2="300" y2="90" />
+    <line x1="400" y1="130" x2="400" y2="200" />
+    <line x1="500" y1="90" x2="550" y2="220" />
+    <line x1="140" y1="280" x2="550" y2="280" />
+  </g>
+
+  <!-- Title Label -->
+  <text x="20" y="30" fill="#ccd6f6" font-family="sans-serif" font-size="14" font-weight="bold">SYMBOLIC LOGIC &amp; FIXED RULES</text>
+</svg>

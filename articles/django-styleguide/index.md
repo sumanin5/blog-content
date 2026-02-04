@@ -1,9 +1,10 @@
 ---
-title: "Django 风格指南 (HackSoft)"
-excerpt: "深度解析 HackSoft 出品的 Django 风格指南，探讨 Service Layer、Selectors 等超越框架的软件工程最佳实践。"
-cover: "./assets/cover.jpg"
-icon: "./assets/icon.svg"
-sort: 10
+cover: cover.jpg
+cover_media_id: 019c2769-768c-7e37-927f-2a32d4ad30bb
+excerpt: 深度解析 HackSoft 出品的 Django 风格指南，探讨 Service Layer、Selectors 等超越框架的软件工程最佳实践。
+hidden: false
+order: 10
+title: Django 风格指南 (HackSoft)
 ---
 
 # Django Styleguide: 软件工程的实用主义

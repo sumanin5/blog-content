@@ -1,5 +1,5 @@
 ---
-hidden: false
+hidden: true
 title: Tech
 ---
 

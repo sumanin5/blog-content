@@ -4,23 +4,22 @@ author: tomyi
 author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
 category: rlao-de-sai
 category_id: 019c21dc-4f75-7cba-9cd6-18404be2b65d
-date: "2026-02-03 14:26:09"
+date: '2026-02-03 14:26:09'
 enable_jsx: false
 is_featured: true
 meta_description: 从感知机到 GPT-4，AI 的每一次质变本质上都是对人类直觉的背叛。本文解析 AI 发展史上关于‘苦涩教训’的宏大叙事。
-meta_keywords: ""
+meta_keywords: ''
 meta_title: AI 演化史深度解析：从人类经验的退场到算力逻辑的接管
 slug: grand-narrative-of-ai-bitter-lesson-p29jer
 status: published
-summary:
-  理查德·萨顿的《苦涩的教训》并非偶然的预言，而是 AI 全球演化的必然逻辑。本文纵览感知机、特征工程、CNN、GAN 等技术的起伏，揭示了 AI
+summary: 理查德·萨顿的《苦涩的教训》并非偶然的预言，而是 AI 全球演化的必然逻辑。本文纵览感知机、特征工程、CNN、GAN 等技术的起伏，揭示了 AI
   进化的终极法则：去掉人为设计的偏见，拥抱可大规模扩展的计算。这是一场人类从‘造物主’向‘点火者’身份转换的宏大进程。
 tags:
-  - AI演化史
-  - 技术哲学
-  - 苦涩的教训
-  - 架构偏见
-  - 大语言模型
+- AI演化史
+- 技术哲学
+- 苦涩的教训
+- 架构偏见
+- 大语言模型
 title: AI 进化论：一部‘苦涩教训’的宏大叙事
 use_server_rendering: true
 ---
@@ -540,7 +539,7 @@ BERT 是那个在考场上拿着放大镜分析文章的 **顶级做题家** ；
 
 但萨顿提出的“苦涩教训”，就像那无边的北海，用绝对的规模与尺度告诉我们：**所有的“笼头”，本质上都是一种对“天性”的阉割。**
 
-![庄周梦蝶](zhuangzi-dream.jpg)
+![庄周梦蝶](https://api.ty1547.com/api/v1/media/019c26b0-bc58-74c2-a81e-8640abee4ef7/thumbnail/large)
 
 <p align="center">图 14：【齐物之梦】<br/>当河伯放下了小与大，贵与贱的执念，他便不仅拥有了黄河，更拥有了北海。正如庄周梦蝶，不知是周与蝶，哪怕物换星移，终究万物一齐。</p>
 

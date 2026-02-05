@@ -1,21 +1,25 @@
 ---
-title: "06-测试和Celery(Testing & Celery)"
-author: "tomyi"
-status: "published"
-is_featured: false
-summary: "探讨 Django 项目中的单元测试规范与 Celery 异步任务的最佳实践。包括工厂模式的使用、任务错误处理以及周期性任务配置。"
-excerpt: "工程保障：高效编写单元测试，以及如何稳健地运行 Celery 异步任务。"
-slug: "django-styleguide-06-testing-celery"
-meta_title: "Django 测试规范与 Celery 异步任务指南"
-meta_description: "涵盖 Django 单元测试的命名规范、工厂模式实践以及 Celery 任务的架构与监控建议。"
-meta_keywords: "Django, 测试, Celery, 异步处理, 任务队列"
-tags:
-  - Django
-  - 测试
-  - Celery
-  - 异步任务
 allow_comments: true
-type: "ARTICLE"
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: django-styleguide
+category_id: 019c2769-763b-734d-873b-c0b734d830ab
+date: '2026-02-05 09:40:43'
+enable_jsx: false
+is_featured: false
+meta_description: 涵盖 Django 单元测试的命名规范、工厂模式实践以及 Celery 任务的架构与监控建议。
+meta_keywords: Django, 测试, Celery, 异步处理, 任务队列
+meta_title: Django 测试规范与 Celery 异步任务指南
+slug: django-styleguide-06-testing-celery-1yla41
+status: published
+summary: 工程保障：高效编写单元测试，以及如何稳健地运行 Celery 异步任务。
+tags:
+- Django
+- 测试
+- Celery
+- 异步任务
+title: 06-测试和Celery(Testing & Celery)
+use_server_rendering: true
 ---
 
 # Django Styleguide 中文翻译 - 测试和 Celery

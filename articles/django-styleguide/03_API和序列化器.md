@@ -1,20 +1,24 @@
 ---
-title: "03-API和序列化器(Serializers)"
-author: "tomyi"
-status: "published"
-is_featured: false
-summary: "探讨在 DRF 项目中如何构建高效的 API 和序列化器。包括命名规范、基于类的视图与基于函数的视图对比，以及嵌套序列化器的处理。"
-excerpt: "API 开发指南：如何配合服务层使用序列化器，以及在复杂业务下如何保持 API 的简洁性。"
-slug: "django-styleguide-03-api-serializers"
-meta_title: "Django API 与序列化器编写指南 | DRF 最佳实践"
-meta_description: "详解基于 DRF 的 API 设计规范，平衡通用性与灵活性，保持序列化器的职责单一性。"
-meta_keywords: "Django, DRF, Serializers, API 设计, 后端开发"
-tags:
-  - Django
-  - DRF
-  - API设计
 allow_comments: true
-type: "ARTICLE"
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: django-styleguide
+category_id: 019c2769-763b-734d-873b-c0b734d830ab
+date: '2026-02-05 09:40:42'
+enable_jsx: false
+is_featured: false
+meta_description: 详解基于 DRF 的 API 设计规范，平衡通用性与灵活性，保持序列化器的职责单一性。
+meta_keywords: Django, DRF, Serializers, API 设计, 后端开发
+meta_title: Django API 与序列化器编写指南 | DRF 最佳实践
+slug: django-styleguide-03-api-serializers-i1r9j9
+status: published
+summary: API 开发指南：如何配合服务层使用序列化器，以及在复杂业务下如何保持 API 的简洁性。
+tags:
+- Django
+- DRF
+- API设计
+title: 03-API和序列化器(Serializers)
+use_server_rendering: true
 ---
 
 # Django Styleguide - API 和序列化器（APIs & Serializers）

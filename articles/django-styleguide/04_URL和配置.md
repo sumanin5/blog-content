@@ -1,20 +1,24 @@
 ---
-title: "04-URL和配置(Settings)"
-author: "tomyi"
-status: "published"
-is_featured: false
-summary: "介绍 Django 项目中 URL 的组织结构和配置文件的最佳实践，包括环境变量管理和多环境配置集成。"
-excerpt: "项目工程化配置：优雅地管理 URL 路由和 settings.py，支持多环境与环境变量。"
-slug: "django-styleguide-04-urls-settings"
-meta_title: "Django URL 与系统配置规范 | 项目工程化"
-meta_description: "学习如何科学地管理 Django 各类配置项，利用环境变量和集成配置保持项目的灵活性与安全性。"
-meta_keywords: "Django, Settings, URLs, 环境变量, 配置管理"
-tags:
-  - Django
-  - 配置管理
-  - 项目规范
 allow_comments: true
-type: "ARTICLE"
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: django-styleguide
+category_id: 019c2769-763b-734d-873b-c0b734d830ab
+date: '2026-02-05 09:40:42'
+enable_jsx: false
+is_featured: false
+meta_description: 学习如何科学地管理 Django 各类配置项，利用环境变量和集成配置保持项目的灵活性与安全性。
+meta_keywords: Django, Settings, URLs, 环境变量, 配置管理
+meta_title: Django URL 与系统配置规范 | 项目工程化
+slug: django-styleguide-04-urls-settings-p95s0f
+status: published
+summary: 项目工程化配置：优雅地管理 URL 路由和 settings.py，支持多环境与环境变量。
+tags:
+- Django
+- 配置管理
+- 项目规范
+title: 04-URL和配置(Settings)
+use_server_rendering: true
 ---
 
 # Django Styleguide 中文翻译 - URL 和配置

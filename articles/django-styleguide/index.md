@@ -4,6 +4,7 @@ cover_media_id: 019c2769-768c-7e37-927f-2a32d4ad30bb
 excerpt: 深度解析 HackSoft 出品的 Django 风格指南，探讨 Service Layer、Selectors 等超越框架的软件工程最佳实践。
 hidden: false
 order: 10
+post_sort: title_asc
 title: Django 风格指南 (HackSoft)
 ---
 

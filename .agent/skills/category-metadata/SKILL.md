@@ -37,10 +37,24 @@ cover_media_id: "UUID" # 优先使用的封面 UUID
 cover: "image.png" # 降级使用的封面文件名或路径（自动匹配媒体库）
 icon: "🚀" # 图标：支持 emoji (< 10字符) 或 文件路径/UUID (≥ 10字符)
 sort: 1 # 排序顺序（默认 0，越小越靠前）
+post_sort: "published_at_desc" # 文章列表默认排序（可选）
 ---
 # 正文标题 (可选)
 正文内容将作为该分类的详细描述存储到数据库中，支持 Markdown。
 ```
+
+### `post_sort` / `post_sort_order` - 文章列表排序
+
+- **类型**: 字符串 (枚举值)
+- **必填**: 否
+- **默认值**: `published_at_desc`
+- **说明**: 定义该分类下文章列表的默认排序列
+- **可选值**:
+  - `published_at_desc`: 按发布时间**倒序**（最新在前）
+  - `published_at_asc`: 按发布时间**正序**（最旧在前）
+  - `title_asc`: 按标题 **A -> Z** 正序
+  - `title_desc`: 按标题 **Z -> A** 倒序
+- **示例**: `post_sort: "title_asc"`
 
 ### 3. 字段特殊逻辑校验
 

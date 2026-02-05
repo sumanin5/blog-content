@@ -1723,4 +1723,4 @@ def feed_serialize_with_stats(items: List[FeedItem], viewer: User):
 
 ---
 
-**下一步建议**：掌握了 API 层的防御性设计后，请进入 **[04_URLs 与项目配置](./04_URL和配置.md)**，学习如何将这些“契约点”优雅地接入系统。
+**下一步建议**：掌握了 API 层的防御性设计后，请进入 **[04_URLs 与项目配置](/posts/articles/django-styleguide-04-urls-settings-p95s0f)**，学习如何将这些“契约点”优雅地接入系统。

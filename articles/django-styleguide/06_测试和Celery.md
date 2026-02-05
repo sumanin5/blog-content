@@ -803,7 +803,7 @@ transaction.on_commit(lambda: email_send_task.delay(email.id))
 
 #### ⚠️ 必须区分：API 异常 vs 任务异常
 
-请注意，这里的错误处理与前面章节提到的 **[API 全局异常处理](./05_错误和异常处理.md)** 是完全不同的概念。
+请注意，这里的错误处理与前面章节提到的 **[API 全局异常处理](/posts/articles/django-styleguide-05-exception-handling-c4meub)** 是完全不同的概念。
 
 | 维度         | API 异常处理 (Web 请求)                | Celery 任务异常处理 (后台任务)             |
 | :----------- | :------------------------------------- | :----------------------------------------- |
@@ -1439,4 +1439,4 @@ result = job.apply_async()
 
 ---
 
-**下一章：** [07\_实用技巧和资源.md](./07_实用技巧和资源.md) - Cookbook、DX 工具和其他实用建议
+**下一章：** [07\_实用技巧和资源.md](/posts/articles/django-styleguide-07-cookbook-dx-4q6h0b) - Cookbook、DX 工具和其他实用建议

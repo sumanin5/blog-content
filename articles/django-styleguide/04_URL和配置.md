@@ -960,4 +960,4 @@ EMAILS_ENABLED=
 
 ---
 
-**下一章：** [05\_错误和异常处理.md](./05_错误和异常处理.md) - 学习如何优雅地处理 API 错误和异常
+**下一章：** [05\_错误和异常处理.md](/posts/articles/django-styleguide-05-exception-handling-c4meub) - 学习如何优雅地处理 API 错误和异常

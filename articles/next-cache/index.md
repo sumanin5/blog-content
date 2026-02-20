@@ -2,6 +2,7 @@
 category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
 cover: cover.png
 cover_media_id: 019c7b3d-48e3-7470-9252-8ee00d82b156
+excerpt: 系统性地拆解 Next.js App Router 的四层缓存机制——请求记忆、数据缓存、全路由缓存、路由器缓存。
 hidden: false
 order: 2
 post_sort: title_asc

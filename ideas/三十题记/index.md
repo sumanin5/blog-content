@@ -1,9 +1,12 @@
 ---
-title: 三十题记
+category_id: 019c7bc5-9b6d-70c7-865c-bdef86dae951
 cover: media/cover.png
+cover_media_id: 019c7bc5-9b88-711e-a3d0-ff3a3b2788e4
 icon: media/icon.svg
-sort: 4
+icon_id: 019c7bc5-9b76-7248-ba03-4fe93978f078
 post_sort: published_at_desc
+sort: 4
+title: 三十题记
 ---
 
 # 三十题记：还没长大的大人

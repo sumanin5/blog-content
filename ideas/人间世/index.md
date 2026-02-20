@@ -1,9 +1,12 @@
 ---
-title: 人间世
+category_id: 019c7bc5-9e00-7c3f-a4e5-082debcf100e
 cover: media/cover.png
+cover_media_id: 019c7bc5-9e21-72ab-9267-7fb199c86049
 icon: media/icon.svg
-sort: 3
+icon_id: 019c7bc5-9e09-7597-a99a-873e5c5a8843
 post_sort: published_at_desc
+sort: 3
+title: 人间世
 ---
 
 # 人间世：在无常中安顿

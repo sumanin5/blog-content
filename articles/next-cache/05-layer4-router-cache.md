@@ -1,19 +1,23 @@
 ---
 allow_comments: true
 author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: next-cache
+category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
+date: '2026-02-20 13:28:59'
 enable_jsx: false
 is_featured: false
 meta_description: 深入理解 Next.js 路由器缓存（Router Cache），了解它为什么是最隐蔽的缓存层，以及 Next.js 15+ 的重大行为变更。
 meta_keywords: Next.js, 路由器缓存, Router Cache, 客户端缓存, App Router, RSC Payload, router.refresh
 meta_title: Next.js 缓存第 4 层：路由器缓存 | 为什么点后退看到的是旧数据
-slug: nextjs-cache-05-router-cache
+slug: nextjs-cache-05-router-cache-4dthcc
 status: published
 summary: 路由器缓存是 Next.js 四层缓存中唯一运行在浏览器端的缓存，它把访问过的页面 RSC Payload 存在内存里实现瞬间跳转，但也是"数据明明更新了，页面还是旧的"最隐蔽的元凶。
 tags:
-  - Next.js
-  - 缓存
-  - 前端架构
-  - React
+- Next.js
+- 缓存
+- 前端架构
+- React
 title: 05-第 4 层：路由器缓存 (Router Cache)
 use_server_rendering: true
 ---

@@ -1,19 +1,24 @@
 ---
 allow_comments: true
 author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: next-cache
+category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
+date: '2026-02-20 13:28:59'
 enable_jsx: false
 is_featured: false
 meta_description: 深入理解 Next.js 全路由缓存（Full Route Cache），了解它如何在构建时缓存整个页面的渲染结果，以及为什么开发环境和生产环境的行为完全不同。
 meta_keywords: Next.js, 全路由缓存, Full Route Cache, SSG, 静态生成, App Router, 缓存, RSC Payload
 meta_title: Next.js 缓存第 3 层：全路由缓存 | 为什么生产环境的页面不更新
-slug: nextjs-cache-04-full-route-cache
+slug: nextjs-cache-04-full-route-cache-4ghjdx
 status: published
-summary: 全路由缓存是 Next.js 四层缓存的第三层，它在构建时将整个页面的渲染结果（HTML + RSC Payload）缓存到服务端文件系统，让所有用户共享同一份渲染结果，彻底省掉服务端渲染的 CPU 开销。
+summary: 全路由缓存是 Next.js 四层缓存的第三层，它在构建时将整个页面的渲染结果（HTML + RSC Payload）缓存到服务端文件系统，让所有用户共享同一份渲染结果，彻底省掉服务端渲染的
+  CPU 开销。
 tags:
-  - Next.js
-  - 缓存
-  - 前端架构
-  - React
+- Next.js
+- 缓存
+- 前端架构
+- React
 title: 04-第 3 层：全路由缓存 (Full Route Cache)
 use_server_rendering: true
 ---

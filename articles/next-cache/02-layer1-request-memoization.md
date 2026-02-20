@@ -1,19 +1,23 @@
 ---
 allow_comments: true
 author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: next-cache
+category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
+date: '2026-02-20 13:28:59'
 enable_jsx: false
 is_featured: false
 meta_description: 深入理解 Next.js 请求记忆（Request Memoization）机制，了解它如何在单次请求内自动去重，让组件级数据获取成为可能。
 meta_keywords: Next.js, 请求记忆, Request Memoization, React cache, 缓存, App Router, RSC
 meta_title: Next.js 缓存第 1 层：请求记忆 | 为什么多个组件 fetch 同一数据只发一次请求
-slug: nextjs-cache-02-request-memoization
+slug: nextjs-cache-02-request-memoization-tx26n0
 status: published
 summary: 请求记忆是 Next.js 四层缓存的第一层，它在单次请求内自动去重相同的 fetch 调用，是 App Router 组件级数据获取能成立的底层保障。
 tags:
-  - Next.js
-  - 缓存
-  - 前端架构
-  - React
+- Next.js
+- 缓存
+- 前端架构
+- React
 title: 02-第 1 层：请求记忆 (Request Memoization)
 use_server_rendering: true
 ---

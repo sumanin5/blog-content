@@ -1,21 +1,28 @@
 ---
 allow_comments: true
 author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: next-cache
+category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
+date: '2026-02-20 13:28:59'
 enable_jsx: false
 is_featured: false
-meta_description: Next.js App Router 四层缓存机制的完整总结，包含速查表、诊断流程、缓存策略选择、前后端分离场景下后端刷新缓存的方案（FastAPI / Spring Boot），以及最佳实践。
-meta_keywords: Next.js, 缓存, 总结, 速查表, App Router, updateTag, revalidateTag, FastAPI, Spring Boot, 前后端分离, webhook
+meta_description: Next.js App Router 四层缓存机制的完整总结，包含速查表、诊断流程、缓存策略选择、前后端分离场景下后端刷新缓存的方案（FastAPI
+  / Spring Boot），以及最佳实践。
+meta_keywords: Next.js, 缓存, 总结, 速查表, App Router, updateTag, revalidateTag, FastAPI,
+  Spring Boot, 前后端分离, webhook
 meta_title: Next.js 缓存机制总结与实战 | 四层缓存速查表、诊断指南与后端联动方案
-slug: nextjs-cache-06-summary
+slug: nextjs-cache-06-summary-ly4mkl
 status: published
-summary: 四层缓存的完整速查表、问题诊断流程、缓存策略选择指南，以及前后端分离场景下后端（FastAPI / Spring Boot）如何主动刷新 Next.js 缓存的完整方案。
+summary: 四层缓存的完整速查表、问题诊断流程、缓存策略选择指南，以及前后端分离场景下后端（FastAPI / Spring Boot）如何主动刷新 Next.js
+  缓存的完整方案。
 tags:
-  - Next.js
-  - 缓存
-  - 前端架构
-  - React
-  - FastAPI
-  - Spring Boot
+- Next.js
+- 缓存
+- 前端架构
+- React
+- FastAPI
+- Spring Boot
 title: 06-总结与实战
 use_server_rendering: true
 ---

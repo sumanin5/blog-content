@@ -1,19 +1,25 @@
 ---
 allow_comments: true
 author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: next-cache
+category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
+date: '2026-02-20 13:28:59'
 enable_jsx: false
 is_featured: false
-meta_description: 深入理解 Next.js 数据缓存（Data Cache）机制，掌握 fetch 缓存策略、updateTag、revalidateTag 等失效手段，解决最常见的"数据不更新"问题。
-meta_keywords: Next.js, 数据缓存, Data Cache, revalidateTag, updateTag, fetch, 缓存失效, App Router
+meta_description: 深入理解 Next.js 数据缓存（Data Cache）机制，掌握 fetch 缓存策略、updateTag、revalidateTag
+  等失效手段，解决最常见的"数据不更新"问题。
+meta_keywords: Next.js, 数据缓存, Data Cache, revalidateTag, updateTag, fetch, 缓存失效, App
+  Router
 meta_title: Next.js 缓存第 2 层：数据缓存 | 为什么数据库更新了页面还是旧的
-slug: nextjs-cache-03-data-cache
+slug: nextjs-cache-03-data-cache-cp4idu
 status: published
 summary: 数据缓存是 Next.js 四层缓存中最核心也是踩坑最多的一层。它把 fetch 的响应持久化到服务端，跨请求、跨用户共享，是大部分"数据不更新"问题的根源。
 tags:
-  - Next.js
-  - 缓存
-  - 前端架构
-  - React
+- Next.js
+- 缓存
+- 前端架构
+- React
 title: 03-第 2 层：数据缓存 (Data Cache)
 use_server_rendering: true
 ---

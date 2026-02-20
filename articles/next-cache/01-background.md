@@ -1,19 +1,23 @@
 ---
 allow_comments: true
 author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: next-cache
+category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
+date: '2026-02-20 13:28:59'
 enable_jsx: false
 is_featured: false
 meta_description: 深入解析 Next.js App Router 四层缓存机制的背景与动机，理解请求记忆、数据缓存、全路由缓存和路由器缓存的设计逻辑。
 meta_keywords: Next.js, 缓存, App Router, SSG, SSR, ISR, 请求记忆, 数据缓存, 全路由缓存, 路由器缓存
 meta_title: Next.js 缓存机制全解析：为什么它这么复杂？| 背景介绍
-slug: nextjs-cache-01-background
+slug: nextjs-cache-01-background-q43pip
 status: published
 summary: Next.js App Router 的缓存系统是最令人困惑的部分。本文从核心矛盾出发，介绍四层缓存模型的设计动机与常见问题场景，为后续逐层深入打下基础。
 tags:
-  - Next.js
-  - 缓存
-  - 前端架构
-  - React
+- Next.js
+- 缓存
+- 前端架构
+- React
 title: 01-背景介绍：为什么 Next.js 的缓存这么复杂？
 use_server_rendering: true
 ---

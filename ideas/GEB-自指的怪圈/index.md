@@ -1,22 +1,24 @@
 ---
-title: "GEB：自指的怪圈与意识的镜像"
-date: "2026-02-05 17:45:00"
+allow_comments: true
 author: tomyi
 author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
 category: ideas
-status: draft
-slug: geb-strange-loop-self-reference
+category_id: 019c7b3d-4c18-7aa6-a293-17f1526ee7c5
 cover: ./cover.png
-summary: "深度解读候世达神作《哥德尔、艾舍尔、巴赫》：在形式系统的无尽阶梯中，探寻那个被称为“我”的幽灵是如何从无意义的符号中涌现的。"
+cover_media_id: 019c7b3d-48e3-7470-9252-8ee00d82b156
+date: '2026-02-05 17:45:00'
+meta_description: 对《哥德尔、艾舍尔、巴赫：集异璧之大成》的深度导读。探讨自指（Self-Reference）、怪圈（Strange Loops）与人工智能的底层逻辑。
+meta_keywords: GEB, 哥德尔, 艾舍尔, 巴赫, 自指, 怪圈, 人工智能, 意识
+slug: geb-strange-loop-self-reference
+status: draft
+summary: 深度解读候世达神作《哥德尔、艾舍尔、巴赫》：在形式系统的无尽阶梯中，探寻那个被称为“我”的幽灵是如何从无意义的符号中涌现的。
 tags:
-  - 哲学
-  - 数学
-  - 读书笔记
-  - 哥德尔
-  - 意识
-meta_description: "对《哥德尔、艾舍尔、巴赫：集异璧之大成》的深度导读。探讨自指（Self-Reference）、怪圈（Strange Loops）与人工智能的底层逻辑。"
-meta_keywords: "GEB, 哥德尔, 艾舍尔, 巴赫, 自指, 怪圈, 人工智能, 意识"
-allow_comments: true
+- 哲学
+- 数学
+- 读书笔记
+- 哥德尔
+- 意识
+title: GEB：自指的怪圈与意识的镜像
 type: ARTICLE
 use_server_rendering: true
 ---

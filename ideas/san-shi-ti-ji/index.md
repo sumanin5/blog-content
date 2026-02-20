@@ -2,6 +2,7 @@
 category_id: 019c7bc5-9b6d-70c7-865c-bdef86dae951
 cover: cover.png
 cover_media_id: 019c7bc5-9b88-711e-a3d0-ff3a3b2788e4
+excerpt: 已经不会再长高了，但好像也没有真正长大
 hidden: false
 order: 4
 post_sort: published_at_desc
@@ -10,7 +11,6 @@ title: 三十题记
 
 # 三十题记：还没长大的大人
 
-> "已经不会再长高了，但好像也没有真正长大。"
 
 ## 关于这个栏目
 

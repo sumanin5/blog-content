@@ -2,6 +2,7 @@
 category_id: 019c7bc5-9e00-7c3f-a4e5-082debcf100e
 cover: cover.png
 cover_media_id: 019c7bc5-9e21-72ab-9267-7fb199c86049
+excerpt: 身处纷繁复杂的人间，关于意义、选择、孤独与变化的哲学思考。不是标准答案，只是深夜里的一些诚实念头。
 hidden: false
 order: 3
 post_sort: published_at_desc

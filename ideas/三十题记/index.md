@@ -2,12 +2,12 @@
 category_id: 019c7bc5-9b6d-70c7-865c-bdef86dae951
 cover: media/cover.png
 cover_media_id: 019c7bc5-9b88-711e-a3d0-ff3a3b2788e4
+excerpt: 三十岁，一个还没长大的大人。在不再长高的年纪，记录那些关于迷茫、爱情、自我寻找的真实故事。
 icon: media/icon.svg
 icon_id: 019c7bc5-9b76-7248-ba03-4fe93978f078
 post_sort: published_at_desc
 sort: 4
 title: 三十题记
-excerpt: 三十岁，一个还没长大的大人。在不再长高的年纪，记录那些关于迷茫、爱情、自我寻找的真实故事。
 ---
 
 # 三十题记：还没长大的大人

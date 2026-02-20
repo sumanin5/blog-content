@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="15" fill="#2c2c3a"/>
+  <!-- Number 30 -->
+  <text x="50" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#e8d5b7" text-anchor="middle" dominant-baseline="middle">30</text>
+  <!-- A subtle question mark, representing the uncertainty of turning 30 -->
+  <text x="74" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#e8d5b7" opacity="0.35">?</text>
+  <!-- Underline -->
+  <line x1="25" y1="72" x2="75" y2="72" stroke="#e8d5b7" stroke-width="1.5" opacity="0.4"/>
+  <!-- 题记 -->
+  <text x="50" y="86" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#e8d5b7" text-anchor="middle" opacity="0.5">题记</text>
+</svg>

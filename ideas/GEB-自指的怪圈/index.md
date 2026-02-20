@@ -4,8 +4,9 @@ author: tomyi
 author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
 category: ideas
 category_id: 019c7b3d-4c18-7aa6-a293-17f1526ee7c5
-cover: ./cover.png
+cover: media/cover.png
 cover_media_id: 019c7b3d-48e3-7470-9252-8ee00d82b156
+icon: media/icon.svg
 date: '2026-02-05 17:45:00'
 meta_description: 对《哥德尔、艾舍尔、巴赫：集异璧之大成》的深度导读。探讨自指（Self-Reference）、怪圈（Strange Loops）与人工智能的底层逻辑。
 meta_keywords: GEB, 哥德尔, 艾舍尔, 巴赫, 自指, 怪圈, 人工智能, 意识

@@ -7,6 +7,7 @@ icon_id: 019c7bc5-9e09-7597-a99a-873e5c5a8843
 post_sort: published_at_desc
 sort: 3
 title: 人间世
+excerpt: 身处纷繁复杂的人间，关于意义、选择、孤独与变化的哲学思考。不是标准答案，只是深夜里的一些诚实念头。
 ---
 
 # 人间世：在无常中安顿

@@ -1,9 +1,13 @@
 ---
-title: "比特漫笔"
-cover: "media/cover.png"
-icon: "📟"
-sort: 5
+category_id: 019cc173-5ef7-711f-9878-ca220c90be7e
+cover: cover.png
+cover_media_id: 019cc173-5f0c-7990-b076-fb1ff0d48a5c
 excerpt: 在代码与逻辑之外，记录关于技术的历史、艺术与哲学思考。那些在深夜调试时闪现出的火花，值得被捡拾。
+hidden: false
+icon: "\U0001F4DF"
+order: 5
+post_sort: published_at_desc
+title: 比特漫笔
 ---
 
 # 比特漫笔：拾起逻辑边缘的火花

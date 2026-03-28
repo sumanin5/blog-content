@@ -1,20 +1,24 @@
 ---
-title: FastAPI 项目结构怎么设计，才能在功能变多后不失控
-slug: how-to-structure-fastapi-projects
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:38'
 enable_jsx: false
-summary: 按业务领域组织 FastAPI 代码，比按 routers/models/schemas 这种文件类型拆分更适合中大型项目。
-excerpt: 按业务领域组织 FastAPI 代码，比按 routers/models/schemas 这种文件类型拆分更适合中大型项目。
-meta_title: FastAPI 项目结构设计：领域驱动而非文件类型拆分 | FastAPI 工程化实践
+is_featured: false
 meta_description: 深度讲解如何按业务领域组织 FastAPI 代码，避免类型驱动的拆分陷阱，构建可扩展的项目架构。
 meta_keywords: FastAPI, 项目结构, 架构设计, 代码组织, 领域驱动, 工程化
+meta_title: FastAPI 项目结构设计：领域驱动而非文件类型拆分 | FastAPI 工程化实践
+slug: how-to-structure-fastapi-projects-ee32vp
+status: published
+summary: 按业务领域组织 FastAPI 代码，比按 routers/models/schemas 这种文件类型拆分更适合中大型项目。
 tags:
-  - FastAPI
-  - Python
-  - Architecture
+- FastAPI
+- Python
+- Architecture
+title: FastAPI 项目结构怎么设计，才能在功能变多后不失控
+use_server_rendering: true
 ---
 
 # FastAPI 项目结构怎么设计，才能在功能变多后不失控

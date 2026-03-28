@@ -1,20 +1,24 @@
 ---
-title: 把依赖注入和 REST 约定结合起来，路由会干净很多
-slug: dependencies-and-rest-routes
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:39'
 enable_jsx: false
-summary: FastAPI 的依赖项不只是注入数据库会话。把资源校验、权限检查和 REST 路径命名统一起来，路由会轻很多。
-excerpt: FastAPI 的依赖项不只是注入数据库会话。把资源校验、权限检查和 REST 路径命名统一起来，路由会轻很多。
-meta_title: FastAPI 依赖注入与 REST 约定：如何让路由更简洁 | 工程化实践
+is_featured: false
 meta_description: 系统讲解如何充分利用 FastAPI 的依赖注入系统，结合 REST 约定，让路由处理器更专注业务逻辑，减少重复代码。
 meta_keywords: FastAPI, 依赖注入, Depends, REST 设计, 路由设计, 权限检查, 资源校验
+meta_title: FastAPI 依赖注入与 REST 约定：如何让路由更简洁 | 工程化实践
+slug: dependencies-and-rest-routes-7xzmro
+status: published
+summary: FastAPI 的依赖项不只是注入数据库会话。把资源校验、权限检查和 REST 路径命名统一起来，路由会轻很多。
 tags:
-  - FastAPI
-  - Dependency Injection
-  - REST
+- FastAPI
+- Dependency Injection
+- REST
+title: 把依赖注入和 REST 约定结合起来，路由会干净很多
+use_server_rendering: true
 ---
 
 # 把依赖注入和 REST 约定结合起来，路由会干净很多

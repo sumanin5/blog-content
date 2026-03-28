@@ -1,20 +1,24 @@
 ---
-title: 把错误处理做系统：分层、统一格式和全局收口
-slug: error-handling-architecture
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:39'
 enable_jsx: false
-summary: 随手 raise HTTPException 能跑，但扩大后很快失控。这篇讲如何通过错误分类、分层边界和全局 handler，让错误处理变成可维护的系统。
-excerpt: 随手 raise HTTPException 能跑，但扩大后很快失控。这篇讲如何通过错误分类、分层边界和全局 handler，让错误处理变成可维护的系统。
-meta_title: FastAPI 错误处理架构：分层、统一格式与全局收口 | 工程化最佳实践
+is_featured: false
 meta_description: 从 HTTPException 的滥用到系统化的错误处理：如何通过错误分类、分层边界设计和全局 exception handler，让错误处理变成可维护的工程化系统。
 meta_keywords: FastAPI, 错误处理, exception handler, HTTPException, 分层架构, 错误分类, 统一响应格式
+meta_title: FastAPI 错误处理架构：分层、统一格式与全局收口 | 工程化最佳实践
+slug: error-handling-architecture-htv8a0
+status: published
+summary: 随手 raise HTTPException 能跑，但扩大后很快失控。这篇讲如何通过错误分类、分层边界和全局 handler，让错误处理变成可维护的系统。
 tags:
-  - FastAPI
-  - Error Handling
-  - Architecture
+- FastAPI
+- Error Handling
+- Architecture
+title: 把错误处理做系统：分层、统一格式和全局收口
+use_server_rendering: true
 ---
 
 # 把错误处理做系统：分层、统一格式和全局收口

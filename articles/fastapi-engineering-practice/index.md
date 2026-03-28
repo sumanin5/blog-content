@@ -1,20 +1,9 @@
 ---
-title: FastAPI 工程化实践
-author: tomyi
-status: published
-is_featured: false
-allow_comments: true
-enable_jsx: false
-summary: FastAPI 入门容易，但如何在项目长大后保持可维护性？本系列深入讨论项目结构、异步边界、错误处理和测试分层等工程化议题。
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
 excerpt: FastAPI 入门容易，但如何在项目长大后保持可维护性？本系列深入讨论项目结构、异步边界、错误处理和测试分层等工程化议题。
-cover: fastapi2.png
-meta_title: FastAPI 工程化实践系列 | 从项目结构到测试分层的完整指南
-meta_description: 8 篇深度文章讲解如何在 FastAPI 项目从小到大的过程中保持代码可维护性，覆盖项目结构、异步模型、错误处理、数据库、测试等核心议题。
-meta_keywords: FastAPI, 工程化, 最佳实践, 项目架构, 异步编程, 错误处理, 数据库设计, 代码测试
-tags:
-  - FastAPI
-  - Engineering
-  - Best Practices
+hidden: false
+post_sort: published_at_desc
+title: FastAPI 工程化实践
 ---
 
 # FastAPI 工程化实践

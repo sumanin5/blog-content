@@ -1,21 +1,25 @@
 ---
-title: 测试不是负担：FastAPI 项目的测试分层与代码质量
-slug: testing-and-code-quality
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:39'
 enable_jsx: false
-summary: 测试写不好，不是因为不够勤快，而是因为没有策略。这篇讲 FastAPI 项目里如何分层测试、搭建可靠的异步测试基础设施，以及 Ruff 怎么帮你在写代码时就发现问题。
-excerpt: 测试写不好，不是因为不够勤快，而是因为没有策略。这篇讲 FastAPI 项目里如何分层测试、搭建可靠的异步测试基础设施，以及 Ruff 怎么帮你在写代码时就发现问题。
-meta_title: FastAPI 测试策略：分层测试、异步测试与 Ruff 代码质量 | 工程化必读
+is_featured: false
 meta_description: 从单元测试、集成测试到端到端测试的分层策略，深入异步测试的陷阱与最佳实践，以及如何用 Ruff 在编码阶段就发现问题，提升代码质量。
 meta_keywords: FastAPI, 测试, pytest, 单元测试, 集成测试, 异步测试, Ruff, 代码质量, 测试分层
+meta_title: FastAPI 测试策略：分层测试、异步测试与 Ruff 代码质量 | 工程化必读
+slug: testing-and-code-quality-pa5un6
+status: published
+summary: 测试写不好，不是因为不够勤快，而是因为没有策略。这篇讲 FastAPI 项目里如何分层测试、搭建可靠的异步测试基础设施，以及 Ruff 怎么帮你在写代码时就发现问题。
 tags:
-  - FastAPI
-  - Testing
-  - Ruff
-  - DX
+- FastAPI
+- Testing
+- Ruff
+- DX
+title: 测试不是负担：FastAPI 项目的测试分层与代码质量
+use_server_rendering: true
 ---
 
 # 测试不是负担：FastAPI 项目的测试分层与代码质量
@@ -601,5 +605,3 @@ CI 里只检查不修复：
 - 用 `dependency_overrides` 替换外部依赖（邮件、第三方 API），数据库保持真实。
 - 给项目加上 Ruff 配置，接到本地保存和 CI。
 - `asyncio_mode = "auto"` 省去每个测试手动加 `@pytest.mark.asyncio`。
-
-

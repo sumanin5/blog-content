@@ -1,20 +1,26 @@
 ---
-title: 如何让 FastAPI 接口文档真正可用
-slug: docs-and-response-models
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:39'
 enable_jsx: false
-summary: FastAPI 自带文档能力，但默认生成的文档远不够"规范"。从请求参数的描述和示例，到 response_model 的正确用法，再到 responses 补全错误契约，这篇讲怎么把接口文档做到前后端都能直接用。
-excerpt: FastAPI 自带文档能力，但默认生成的文档远不够"规范"。从请求参数的描述和示例，到 response_model 的正确用法，再到 responses 补全错误契约，这篇讲怎么把接口文档做到前后端都能直接用。
-meta_title: FastAPI 接口文档专业化：response_model、responses 与 OpenAPI 契约 | 前后端对接指南
-meta_description: 从参数描述、示例数据、response_model 正确用法，到 responses 补全错误契约，将 FastAPI 自动生成的文档打造成前后端都能直接使用的专业 API 契约。
+is_featured: false
+meta_description: 从参数描述、示例数据、response_model 正确用法，到 responses 补全错误契约，将 FastAPI 自动生成的文档打造成前后端都能直接使用的专业
+  API 契约。
 meta_keywords: FastAPI, OpenAPI, response_model, Swagger, 接口文档, 契约, 参数描述, 错误处理
+meta_title: FastAPI 接口文档专业化：response_model、responses 与 OpenAPI 契约 | 前后端对接指南
+slug: docs-and-response-models-6ciafl
+status: published
+summary: FastAPI 自带文档能力，但默认生成的文档远不够"规范"。从请求参数的描述和示例，到 response_model 的正确用法，再到 responses
+  补全错误契约，这篇讲怎么把接口文档做到前后端都能直接用。
 tags:
-  - FastAPI
-  - OpenAPI
-  - Pydantic
+- FastAPI
+- OpenAPI
+- Pydantic
+title: 如何让 FastAPI 接口文档真正可用
+use_server_rendering: true
 ---
 
 # 如何让 FastAPI 接口文档真正可用

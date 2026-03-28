@@ -1,21 +1,26 @@
 ---
-title: 数据库别拖后腿：迁移命名、约束约定和 SQL 优先
-slug: migrations-naming-and-sql-first
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:39'
 enable_jsx: false
-summary: FastAPI 项目的数据库体验，很大程度上取决于迁移是否可读、命名是否一致，以及你有没有把该放进 SQL 的工作继续留在 Python 里做。
-excerpt: FastAPI 项目的数据库体验，很大程度上取决于迁移是否可读、命名是否一致，以及你有没有把该放进 SQL 的工作继续留在 Python 里做。
-meta_title: FastAPI 数据库规范：迁移命名、SQL 约束与 SQL 优先策略 | 工程化指南
-meta_description: 讲解如何通过规范的迁移命名、数据库约束约定和 SQL 优先的思路，让 FastAPI 项目的数据库管理变得可维护且高效。深入 Alembic、SQLAlchemy 和 PostgreSQL。
+is_featured: false
+meta_description: 讲解如何通过规范的迁移命名、数据库约束约定和 SQL 优先的思路，让 FastAPI 项目的数据库管理变得可维护且高效。深入 Alembic、SQLAlchemy
+  和 PostgreSQL。
 meta_keywords: FastAPI, 数据库迁移, Alembic, SQLAlchemy, PostgreSQL, 数据库设计, SQL约束, 命名规范
+meta_title: FastAPI 数据库规范：迁移命名、SQL 约束与 SQL 优先策略 | 工程化指南
+slug: migrations-naming-and-sql-first-cu50vq
+status: published
+summary: FastAPI 项目的数据库体验，很大程度上取决于迁移是否可读、命名是否一致，以及你有没有把该放进 SQL 的工作继续留在 Python 里做。
 tags:
-  - FastAPI
-  - SQLAlchemy
-  - PostgreSQL
-  - Alembic
+- FastAPI
+- SQLAlchemy
+- PostgreSQL
+- Alembic
+title: 数据库别拖后腿：迁移命名、约束约定和 SQL 优先
+use_server_rendering: true
 ---
 
 # 数据库别拖后腿：迁移命名、约束约定和 SQL 优先

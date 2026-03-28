@@ -1,20 +1,24 @@
 ---
-title: FastAPI 里什么时候该用 async，什么时候该用线程池
-slug: async-boundaries-in-fastapi
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:39'
 enable_jsx: false
-summary: FastAPI 快不快，关键不在于你写没写 async，而在于有没有把阻塞操作放错地方。
-excerpt: FastAPI 快不快，关键不在于你写没写 async，而在于有没有把阻塞操作放错地方。
-meta_title: FastAPI 异步边界：何时用 async，何时用线程池 | 性能优化指南
+is_featured: false
 meta_description: 揭示 FastAPI 性能的真相：不是 async 的多少，而是阻塞操作的位置。详解 I/O 密集、CPU 密集、混合场景的处理方案。
 meta_keywords: FastAPI, async, 异步编程, 线程池, 性能优化, 阻塞操作, Uvicorn
+meta_title: FastAPI 异步边界：何时用 async，何时用线程池 | 性能优化指南
+slug: async-boundaries-in-fastapi-xcu4e8
+status: published
+summary: FastAPI 快不快，关键不在于你写没写 async，而在于有没有把阻塞操作放错地方。
 tags:
-  - FastAPI
-  - Async
-  - Performance
+- FastAPI
+- Async
+- Performance
+title: FastAPI 里什么时候该用 async，什么时候该用线程池
+use_server_rendering: true
 ---
 
 # FastAPI 里什么时候该用 async，什么时候该用线程池

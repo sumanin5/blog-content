@@ -1,20 +1,24 @@
 ---
-title: FastAPI 里的数据边界：Pydantic 模型和配置别再混着写
-slug: pydantic-models-and-settings
-author: tomyi
-status: published
-is_featured: false
 allow_comments: true
+author: tomyi
+author_id: 019c21db-4c02-7836-9d5b-36c688f8b4e0
+category: fastapi-engineering-practice
+category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+date: '2026-03-28 18:00:39'
 enable_jsx: false
-summary: Pydantic 最有价值的地方不是省几行校验代码，而是帮你把请求、响应、配置和内部数据边界理顺。
-excerpt: Pydantic 最有价值的地方不是省几行校验代码，而是帮你把请求、响应、配置和内部数据边界理顺。
-meta_title: Pydantic 数据边界：如何区分请求、响应、配置和内部模型 | FastAPI 最佳实践
+is_featured: false
 meta_description: 深度讲解在 FastAPI 中如何正确使用 Pydantic 模型，明确数据边界，分离请求、响应、配置、内部数据模型。
 meta_keywords: FastAPI, Pydantic, 数据校验, 模型设计, 数据边界, 配置管理, BaseSettings
+meta_title: Pydantic 数据边界：如何区分请求、响应、配置和内部模型 | FastAPI 最佳实践
+slug: pydantic-models-and-settings-1p1ect
+status: published
+summary: Pydantic 最有价值的地方不是省几行校验代码，而是帮你把请求、响应、配置和内部数据边界理顺。
 tags:
-  - FastAPI
-  - Pydantic
-  - Validation
+- FastAPI
+- Pydantic
+- Validation
+title: FastAPI 里的数据边界：Pydantic 模型和配置别再混着写
+use_server_rendering: true
 ---
 
 # FastAPI 里的数据边界：Pydantic 模型和配置别再混着写

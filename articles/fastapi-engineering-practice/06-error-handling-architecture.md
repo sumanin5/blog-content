@@ -15,8 +15,8 @@ status: published
 summary: 随手 raise HTTPException 能跑，但扩大后很快失控。这篇讲如何通过错误分类、分层边界和全局 handler，让错误处理变成可维护的系统。
 tags:
 - FastAPI
-- Error Handling
 - Architecture
+- Error Handling
 title: 06-把错误处理做系统：分层、统一格式和全局收口
 use_server_rendering: true
 ---
@@ -441,4 +441,4 @@ async def handle_unexpected_error(request: Request, exc: Exception):
 
 ---
 
-下一篇：[数据库别拖后腿：迁移命名、约束约定和 SQL 优先](./07-migrations-naming-and-sql-first.md)
+下一篇：[数据库别拖后腿：迁移命名、约束约定和 SQL 优先](/posts/articles/migrations-naming-and-sql-first-cu50vq)

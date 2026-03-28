@@ -344,4 +344,4 @@ class UserResponse(BaseModel):
 
 ---
 
-下一篇：[依赖注入与 RESTful 路由设计](./04-dependencies-and-rest-routes.md)
+下一篇：[依赖注入与 RESTful 路由设计](/posts/articles/dependencies-and-rest-routes-7xzmro)

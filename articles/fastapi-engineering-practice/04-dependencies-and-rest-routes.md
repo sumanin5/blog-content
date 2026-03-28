@@ -327,4 +327,4 @@ async def create_comment(
 
 ---
 
-下一篇：[让 FastAPI 接口更专业：文档契约、response_model 和模型组织](./05-docs-and-response-models.md)
+下一篇：[让 FastAPI 接口更专业：文档契约、response_model 和模型组织](/posts/articles/docs-and-response-models-6ciafl)

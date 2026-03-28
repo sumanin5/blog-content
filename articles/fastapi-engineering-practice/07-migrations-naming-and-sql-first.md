@@ -673,4 +673,4 @@ SQL First 是一个数据边界原则，不是"一切都用 SQL"的教条。更�
 
 ---
 
-下一篇：[测试不是负担：FastAPI 项目的测试分层与代码质量](./08-testing-and-code-quality.md)
+下一篇：[测试不是负担：FastAPI 项目的测试分层与代码质量](/posts/articles/testing-and-code-quality-pa5un6)

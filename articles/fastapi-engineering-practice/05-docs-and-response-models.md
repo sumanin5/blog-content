@@ -17,8 +17,8 @@ summary: FastAPI 自带文档能力，但默认生成的文档远不够"规范"�
   补全错误契约，这篇讲怎么把接口文档做到前后端都能直接用。
 tags:
 - FastAPI
-- OpenAPI
 - Pydantic
+- OpenAPI
 title: 05-让 FastAPI 接口更专业：文档契约、response_model 和模型组织
 use_server_rendering: true
 ---
@@ -511,7 +511,7 @@ async def update_post(post_id: int, payload: PostUpdate):
 
 不要为了"统一"把所有响应都抽到公共层。一旦描述脱离了具体接口语义，文档就会开始变得表面整齐、实际难用。
 
-`responses` 和错误处理是连着的。如果你的项目已经有统一的错误响应格式（比如包含 `code`、`message` 的结构），`responses` 里直接引用同一个 `ErrorResponse` model，文档里的契约和代码里的错误处理策略才是一致的。关于错误格式的完整设计——错误分类、分层边界和全局 handler，详见[第 6 篇：把错误处理做系统](./06-error-handling-architecture.md)。
+`responses` 和错误处理是连着的。如果你的项目已经有统一的错误响应格式（比如包含 `code`、`message` 的结构），`responses` 里直接引用同一个 `ErrorResponse` model，文档里的契约和代码里的错误处理策略才是一致的。关于错误格式的完整设计——错误分类、分层边界和全局 handler，详见[第 6 篇：把错误处理做系统](/posts/articles/error-handling-architecture-htv8a0)。
 
 ## 接口元信息：`summary`、`description` 和 tags 分组
 
@@ -662,4 +662,4 @@ app = FastAPI(
 
 ---
 
-下一篇：[把错误处理做系统：分层、统一格式和全局收口](./06-error-handling-architecture.md)
+下一篇：[把错误处理做系统：分层、统一格式和全局收口](/posts/articles/error-handling-architecture-htv8a0)

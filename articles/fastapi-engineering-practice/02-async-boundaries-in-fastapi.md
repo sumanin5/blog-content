@@ -331,4 +331,4 @@ async def create_payment(payload: dict):
 
 ---
 
-下一篇：[Pydantic 数据模型与配置管理](./03-pydantic-models-and-settings.md)
+下一篇：[Pydantic 数据模型与配置管理](/posts/articles/pydantic-models-and-settings-1p1ect)

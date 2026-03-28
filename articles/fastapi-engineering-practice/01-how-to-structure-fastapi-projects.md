@@ -268,4 +268,4 @@ tests/
 
 但结构只是第一层。目录拆得再清楚，如果你在 `async def` 里继续写阻塞调用，或者没有明确区分异步 I/O、同步 I/O 和 CPU 密集任务，代码依然会很快变得难维护。
 
-这也是为什么下一篇要继续讨论 FastAPI 里另一个更容易被误用的问题：[FastAPI 里什么时候该用 async，什么时候该用线程池](./02-async-boundaries-in-fastapi.md)。很多性能问题其实是边界问题，而不是框架问题。
+这也是为什么下一篇要继续讨论 FastAPI 里另一个更容易被误用的问题：[FastAPI 里什么时候该用 async，什么时候该用线程池](/posts/articles/async-boundaries-in-fastapi-xcu4e8)。很多性能问题其实是边界问题，而不是框架问题。

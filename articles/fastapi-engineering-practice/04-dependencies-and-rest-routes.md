@@ -17,7 +17,7 @@ tags:
 - FastAPI
 - Dependency Injection
 - REST
-title: 把依赖注入和 REST 约定结合起来，路由会干净很多
+title: 04-把依赖注入和 REST 约定结合起来，路由会干净很多
 use_server_rendering: true
 ---
 

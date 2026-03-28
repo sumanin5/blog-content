@@ -17,7 +17,7 @@ tags:
 - FastAPI
 - Async
 - Performance
-title: FastAPI 里什么时候该用 async，什么时候该用线程池
+title: 02-FastAPI 里什么时候该用 async，什么时候该用线程池
 use_server_rendering: true
 ---
 

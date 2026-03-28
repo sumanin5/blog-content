@@ -19,7 +19,7 @@ tags:
 - FastAPI
 - OpenAPI
 - Pydantic
-title: 如何让 FastAPI 接口文档真正可用
+title: 05-让 FastAPI 接口更专业：文档契约、response_model 和模型组织
 use_server_rendering: true
 ---
 

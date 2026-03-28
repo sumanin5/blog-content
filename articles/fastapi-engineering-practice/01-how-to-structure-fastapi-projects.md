@@ -17,7 +17,7 @@ tags:
 - FastAPI
 - Python
 - Architecture
-title: FastAPI 项目结构怎么设计，才能在功能变多后不失控
+title: 01-FastAPI 项目结构怎么设计，才能在功能变多后不失控
 use_server_rendering: true
 ---
 

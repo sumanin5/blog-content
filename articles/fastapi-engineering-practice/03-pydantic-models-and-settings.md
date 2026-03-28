@@ -17,7 +17,7 @@ tags:
 - FastAPI
 - Pydantic
 - Validation
-title: FastAPI 里的数据边界：Pydantic 模型和配置别再混着写
+title: 03-FastAPI 里的数据边界：Pydantic 模型和配置别再混着写
 use_server_rendering: true
 ---
 

@@ -17,7 +17,7 @@ tags:
 - FastAPI
 - Error Handling
 - Architecture
-title: 把错误处理做系统：分层、统一格式和全局收口
+title: 06-把错误处理做系统：分层、统一格式和全局收口
 use_server_rendering: true
 ---
 

@@ -18,7 +18,7 @@ tags:
 - Testing
 - Ruff
 - DX
-title: 测试不是负担：FastAPI 项目的测试分层与代码质量
+title: 08-FastAPI 项目为什么要尽早上异步测试和 Ruff
 use_server_rendering: true
 ---
 

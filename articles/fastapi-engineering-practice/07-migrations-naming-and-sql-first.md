@@ -19,7 +19,7 @@ tags:
 - SQLAlchemy
 - PostgreSQL
 - Alembic
-title: 数据库别拖后腿：迁移命名、约束约定和 SQL 优先
+title: 07-数据库别拖后腿：迁移命名、约束约定和 SQL 优先
 use_server_rendering: true
 ---
 

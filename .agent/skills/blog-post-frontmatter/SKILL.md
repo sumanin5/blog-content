@@ -71,3 +71,9 @@ cover: "image.png" # 封面图路径 (可选)
 | `status` | 是   | 默认为 `published`。如果不希望被看到请设为 `draft`。                                                        |
 | `tags`   | 是   | 列表格式。请尽量复用已有的标签体系。                                                                        |
 | `cover`  | 否   | 封面图片路径。可以是相对路径或 `uploads/` 路径。                                                            |
+| `allow_comments` | 否 | 是否允许评论。默认 `true`。                                                                                |
+| `type`   | 否   | 内容类型。通常为 `ARTICLE`。                                                                                |
+| `hidden` | 否   | 是否隐藏。系统字段，通常由后台管理。                                                                        |
+| `post_sort` | 否 | 内容排序方式。可选值：`title_asc`（标题升序）、`published_at_desc`（发布时间降序）等。系统字段。            |
+| `category_id` | 否 | 分类 ID。系统自动生成，用于关联文章到分类。                                                                |
+| `cover_media_id` | 否 | 封面媒体 ID。系统自动生成，用于关联封面图片。                                                              |

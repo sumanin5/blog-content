@@ -1,0 +1,59 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#ffffff"/>
+
+  <!-- Left gear (darker teal, represents engineering/system) -->
+  <g transform="translate(70, 85)">
+    <!-- Gear body -->
+    <circle cx="0" cy="0" r="20" fill="#009685"/>
+    <!-- Gear teeth -->
+    <g stroke="#009685" stroke-width="3.5" fill="none">
+      <!-- Top teeth -->
+      <rect x="-4" y="-28" width="8" height="10" fill="#009685"/>
+      <rect x="15" y="-20" width="10" height="8" fill="#009685" transform="rotate(45)"/>
+      <!-- Right teeth -->
+      <rect x="28" y="-4" width="10" height="8" fill="#009685"/>
+      <rect x="20" y="15" width="8" height="10" fill="#009685" transform="rotate(45)"/>
+      <!-- Bottom teeth -->
+      <rect x="-4" y="28" width="8" height="10" fill="#009685"/>
+      <rect x="-20" y="20" width="8" height="10" fill="#009685" transform="rotate(-45)"/>
+      <!-- Left teeth -->
+      <rect x="-28" y="-4" width="10" height="8" fill="#009685"/>
+      <rect x="-20" y="-20" width="10" height="8" fill="#009685" transform="rotate(-45)"/>
+    </g>
+    <!-- Center hole -->
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+  </g>
+
+  <!-- Right gear (lighter teal, represents engineering/system) -->
+  <g transform="translate(130, 100)">
+    <!-- Gear body -->
+    <circle cx="0" cy="0" r="18" fill="#00b89a" opacity="0.8"/>
+    <!-- Gear teeth -->
+    <g stroke="#00b89a" stroke-width="3" fill="none">
+      <!-- Top teeth -->
+      <rect x="-3.5" y="-26" width="7" height="9" fill="#00b89a" opacity="0.8"/>
+      <rect x="14" y="-18" width="9" height="7" fill="#00b89a" opacity="0.8" transform="rotate(45)"/>
+      <!-- Right teeth -->
+      <rect x="26" y="-3.5" width="9" height="7" fill="#00b89a" opacity="0.8"/>
+      <rect x="18" y="14" width="7" height="9" fill="#00b89a" opacity="0.8" transform="rotate(45)"/>
+      <!-- Bottom teeth -->
+      <rect x="-3.5" y="26" width="7" height="9" fill="#00b89a" opacity="0.8"/>
+      <!-- Left teeth -->
+      <rect x="-26" y="-3.5" width="9" height="7" fill="#00b89a" opacity="0.8"/>
+    </g>
+    <!-- Center hole -->
+    <circle cx="0" cy="0" r="5" fill="#ffffff"/>
+  </g>
+
+  <!-- Central lightning bolt (represents speed/FastAPI) -->
+  <g transform="translate(100, 100)">
+    <!-- Lightning bolt path with 3D effect -->
+    <path d="M 0,-30 L 12,-8 L 0,0 L 16,32 L -8,12 L -2,8 Z" fill="#009685"/>
+    <!-- Highlight on lightning for dimension -->
+    <path d="M -6,-18 L 4,-8 L -2,0 L 8,20" stroke="#00d4aa" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Outer border circle -->
+  <circle cx="100" cy="100" r="99" fill="none" stroke="#009685" stroke-width="2"/>
+</svg>

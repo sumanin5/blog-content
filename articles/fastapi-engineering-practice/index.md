@@ -4,7 +4,7 @@ cover: fastapi2.png
 cover_media_id: 019d35a3-53fa-7d9b-ad68-964c0f81ddb2
 excerpt: FastAPI 入门容易，但如何在项目长大后保持可维护性？本系列深入讨论项目结构、异步边界、错误处理和测试分层等工程化议题。
 hidden: false
-post_sort: published_at_desc
+post_sort: title_asc
 title: FastAPI 工程化实践
 ---
 

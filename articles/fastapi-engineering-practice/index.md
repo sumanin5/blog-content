@@ -1,5 +1,7 @@
 ---
 category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
+cover: fastapi2.png
+cover_media_id: 019d359a-ec80-7ce3-a755-4a2b1ca21f0
 excerpt: FastAPI 入门容易，但如何在项目长大后保持可维护性？本系列深入讨论项目结构、异步边界、错误处理和测试分层等工程化议题。
 hidden: false
 post_sort: published_at_desc

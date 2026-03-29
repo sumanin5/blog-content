@@ -77,3 +77,78 @@ cover: "image.png" # 封面图路径 (可选)
 | `post_sort` | 否 | 内容排序方式。可选值：`title_asc`（标题升序）、`published_at_desc`（发布时间降序）等。系统字段。            |
 | `category_id` | 否 | 分类 ID。系统自动生成，用于关联文章到分类。                                                                |
 | `cover_media_id` | 否 | 封面媒体 ID。系统自动生成，用于关联封面图片。                                                              |
+
+## 分类索引（Category Index）的特殊处理
+
+### 什么是分类索引？
+
+每个分类目录下的 `index.md` 文件是分类索引，用来展示该分类的说明、覆盖图和内容组织。
+
+**示例路径**：
+- `articles/fastapi-engineering-practice/index.md`
+- `articles/django-styleguide/index.md`
+
+### 分类索引中的链接处理
+
+#### 链接自动转换 ✅
+
+分类索引中的**相对链接会被自动转换为绝对 URL**：
+
+```markdown
+# ❌ 不要这样写（虽然也能工作，但依赖自动转换）
+- [FastAPI 01](./01-how-to-structure-fastapi-projects.md)
+
+# ✅ 系统会自动将上面的链接转换为：
+- [FastAPI 01](/posts/articles/how-to-structure-fastapi-projects-ee32vp)
+```
+
+#### 工作原理
+
+当 git 内容同步时：
+1. 系统扫描 `index.md` 并识别为分类索引
+2. `handle_category_sync()` 处理该文件
+3. **ContentProcessor** 自动转换其中的相对链接为绝对 URL
+4. 转换后的内容保存到数据库的分类描述字段
+
+### 最佳实践
+
+#### ✅ 推荐方式：使用相对链接
+
+在分类索引中使用**相对路径**，让系统自动转换：
+
+```markdown
+## 系列文章
+
+### 基础篇
+- [第一篇介绍](./01-introduction.md)
+- [第二篇高级](./02-advanced.md)
+
+### 进阶篇
+- [优化技巧](./03-optimization.md)
+```
+
+**优点**：
+- 链接在文件系统中有效，开发时易于验证
+- 系统会自动转换，无需手动维护 slug
+- 即使重新组织目录结构，相对路径仍有效
+
+#### ❌ 不推荐方式：硬编码绝对 URL
+
+```markdown
+# 不要这样做（slug 可能变化）
+- [文章](./posts/articles/some-random-slug-abc123)
+```
+
+### 故障排查
+
+**问题**：分类索引中的链接显示为相对路径而不是绝对 URL
+
+**可能原因**：
+1. 同步脚本还未运行
+2. 链接格式不符合 Markdown 标准（如缺少 `]`）
+3. 目标文件不在数据库中
+
+**解决方案**：
+1. 确保所有文章都已同步到数据库
+2. 检查链接格式是否为 `[text](./file.md)`
+3. 运行 `scripts/sync-posts.sh` 重新同步

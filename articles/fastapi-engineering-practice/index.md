@@ -27,14 +27,14 @@ FastAPI 入门很容易，但等项目真正长大——接口增多、团队扩
 
 ### 基础篇
 
-- [01-FastAPI 项目结构怎么设计，才能在功能变多后不失控(./01-how-to-structure-fastapi-projects.md)
-- [02-FastAPI 里什么时候该用 async，什么时候该用线程池(./02-async-boundaries-in-fastapi.md)
-- [03-FastAPI 里的数据边界：Pydantic 模型和配置别再混着写(./03-pydantic-models-and-settings.md)
-- [04-把依赖注入和 REST 约定结合起来，路由会干净很多(./04-dependencies-and-rest-routes.md)
+- [01-FastAPI 项目结构怎么设计，才能在功能变多后不失控](/posts/articles/how-to-structure-fastapi-projects-ee32vp)
+- [02-FastAPI 里什么时候该用 async，什么时候该用线程池](/posts/articles/async-boundaries-in-fastapi-xcu4e8)
+- [03-FastAPI 里的数据边界：Pydantic 模型和配置别再混着写](/posts/articles/pydantic-models-and-settings-1p1ect)
+- [04-把依赖注入和 REST 约定结合起来，路由会干净很多](/posts/articles/dependencies-and-rest-routes-7xzmro)
 
 ### 工程篇
 
-- [05-让 FastAPI 接口更专业：文档契约、response_model 和模型组织(./05-docs-and-response-models.md)
-- [06-把错误处理做系统：分层、统一格式和全局收口(./06-error-handling-architecture.md)
-- [07-数据库别拖后腿：迁移命名、约束约定和 SQL 优先(./07-migrations-naming-and-sql-first.md)
-- [08-FastAPI 项目为什么要尽早上异步测试和 Ruff(./08-testing-and-code-quality.md)
+- [05-让 FastAPI 接口更专业：文档契约、response_model 和模型组织](/posts/articles/docs-and-response-models-6ciafl)
+- [06-把错误处理做系统：分层、统一格式和全局收口](/posts/articles/error-handling-architecture-htv8a0)
+- [07-数据库别拖后腿：迁移命名、约束约定和 SQL 优先](/posts/articles/migrations-naming-and-sql-first-cu50vq)
+- [08-FastAPI 项目为什么要尽早上异步测试和 Ruff](\./08-testing-and-code-quality.md)

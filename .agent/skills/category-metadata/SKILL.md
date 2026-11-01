@@ -9,8 +9,8 @@ description: 专门用于创建、校验和维护博客分类目录下的 index.
 
 ## When to use this skill (何时使用)
 
-- 在 `content/articles/` 或 `ideas/` 下创建新分类目录时。
-- 需要修改分类的显示名称（title）、图标（icon）、排序（sort）或封面（cover）时。
+- 在 `articles/` 或 `ideas/` 下创建新分类目录时。
+- 需要修改分类的显示名称（title）、简介（excerpt）、图标（icon）、排序（sort）或封面（cover）时。
 - 需要通过 `hidden: true` 隐藏某个分类时。
 - 编辑分类的详细 Markdown 介绍（description）时。
 
@@ -22,20 +22,20 @@ description: 专门用于创建、校验和维护博客分类目录下的 index.
 - **Post Type 自动推导**:
   - 路径包含 `articles/` → `post_type: ARTICLES`
   - 路径包含 `ideas/` → `post_type: IDEAS`
-- **Slug 自动推导**: 使用目录名。例如 `content/articles/tech-share/` 推导出 `slug: tech-share`。
+- **Slug 自动推导**: 由目录名生成。例如 `articles/tech-share/` 推导出 `slug: tech-share`。
+- **目录名必须用小写英文加连字符**：中文目录名会被转成拼音 slug，后端写回 `index.md` 时会另建一个拼音目录，造成重复目录（`ideas/人间世/` 与 `ideas/ren-jian-shi/` 即由此产生）。中文名写在 `title` 里。
 
 ### 2. Frontmatter 编写规范
 
 ```yaml
 ---
-# ========== 必填字段 ==========
-title: "显示名称"
-
-# ========== 可选字段 ==========
+# 所有字段均可选；建议至少写 title
+title: "显示名称" # 不写则由目录 slug 生成（如 tech-share → Tech-Share）
+excerpt: "一句话简介" # 显示在专栏列表与专栏页标题下方
 hidden: false # 是否隐藏（默认 false）。映射至 is_active (hidden: true => is_active: false)
 cover_media_id: "UUID" # 优先使用的封面 UUID
-cover: "image.png" # 降级使用的封面文件名或路径（自动匹配媒体库）
-icon: "🚀" # 图标：支持 emoji (< 10字符) 或 文件路径/UUID (≥ 10字符)
+cover: "assets/cover.png" # 相对于 index.md 的图片路径，自动上传；不要写不存在的裸文件名
+icon: "🚀" # 图标：少于 10 个字符按 emoji 处理；图片写相对路径（≥ 10 个字符），如 assets/icon.svg
 sort: 1 # 排序顺序（默认 0，越小越靠前）
 post_sort: "published_at_desc" # 文章列表默认排序（可选）
 ---
@@ -81,7 +81,7 @@ sort: 1
 ```yaml
 ---
 title: "摄影集"
-cover: "landscape.jpg"
+cover: "assets/photography-cover.jpg"
 icon: "📷"
 ---
 生活不只是代码，还有远方的风景。

@@ -1,6 +1,6 @@
 ---
 name: blog-post-frontmatter
-description: 生成、校验和更新博客文章的 YAML Frontmatter 元数据。当创建新文章或优化 SEO 信息时使用。
+description: 生成、校验和更新博客文章的 YAML Frontmatter 元数据（以同步代码的实际解析规则为准）。当创建新文章或优化 SEO 信息时使用。
 ---
 
 # Blog Post Frontmatter 规范
@@ -13,70 +13,66 @@ description: 生成、校验和更新博客文章的 YAML Frontmatter 元数据�
 - 需要补充或优化文章的 SEO 信息（meta_title, description）时。
 - 检查文章格式是否合规时。
 
-## 核心规则与注意事项
+## 核心规则（以同步代码的实际行为为准）
 
-1.  **自动字段**：`author_id`, `category_id`, `date` 等字段通常由后台数据库自动回填或管理，**在手动创建时通常只需留空或移除**，除非你需要明确覆盖。
-2.  **必需字段**：`title`, `author`, `tags`, `status` 是必须明确填写的。
-3.  **语言要求**：除非另有说明，摘要（summary/excerpt）和 SEO 描述应使用**中文**。
+解析逻辑见主仓库 `backend/app/git_ops/components/metadata.py` 与 `processors/`。与仓库根目录 `AGENTS.md` 保持一致。
 
-## 标准 Frontmatter 模板
+1. **唯一必需字段是 `author`**：值为已存在的用户名（默认 `tomyi`）或用户 UUID。缺失或用户不存在时同步报错，文章不会导入。
+2. **`status` 不写默认是草稿**：只接受 `draft` / `published`（不区分大小写），其他值同步报错。要上线必须写 `status: published`。
+3. **其余字段都可选**，不写时的行为见下表。
+4. **后端回填字段不要手写**：`slug`、`author_id`、`category`、`category_id`、`cover_media_id` 由同步回填，推送后 `git pull` 获取。
+5. **内容类型和专栏由目录决定**：`articles/<专栏>/` 或 `ideas/<专栏>/`，frontmatter 里的 `type` 不起作用，不用写。
 
-在创建新文章时，请使用以下模板：
+## 最小模板（想法流常用）
 
 ```yaml
 ---
-# ========== 核心元数据 (必填) ==========
-title: "文章主标题"
-author: "tomyi" # 默认作者
-status: "published" # 状态：published (发布) 或 draft (草稿)
-is_featured: false # 是否推荐：true/false
+author: tomyi
+status: published
+---
+```
 
-# ========== 内容概览 (必填) ==========
-# Summary 是用于列表页展示的精简摘要，建议 80-120 字
-summary: "这里写文章的简要概述，吸引读者点击。"
-# Excerpt 是备用字段，通常与 summary 保持一致或更短
-excerpt: "同 summary"
+标题取文件名，发布时间取同步时间，摘要从正文自动截取。
 
-# ========== SEO 优化 (强烈推荐) ==========
-slug: "custom-url-slug" # URL 友好的英文标识，如 "deep-learning-intro"
-meta_title: "SEO 标题 | 博客名称" # 通常包含关键词，比主标题更具搜索吸引力
-meta_description: "SEO 描述，用于搜索引擎结果页（SERP），应包含核心关键词。"
-meta_keywords: "关键词1, 关键词2, 强化学习, AI"
+## 推荐模板（专栏系列文章）
 
-# ========== 分类与标签 ==========
-# 以 YAML 列表格式书写
+```yaml
+---
+title: "09-文章主标题"
+author: tomyi
+status: published
+summary: "80–120 字的中文摘要，用于列表卡片与搜索结果。"
 tags:
-  - 技术分享
-  - 架构设计
-  - 随笔
-
-# ========== 系统/高级设置 (按需) ==========
-allow_comments: true # 是否允许评论
-type: "ARTICLE" # 内容类型
-cover: "image.png" # 封面图路径 (可选)
-
-# 注意：以下字段通常由系统生成，如有变动请谨慎修改
-# date: "2024-xx-xx"
-# author_id: "..."
-# category_id: "..."
+  - FastAPI
+  - Python
+meta_title: "SEO 标题 | 专栏名"
+meta_description: "SEO 描述，包含核心关键词。"
+meta_keywords: "关键词1, 关键词2"
+cover: assets/article-cover.png
+is_featured: false
 ---
 ```
 
 ## 字段详解
 
-| 字段     | 必填 | 说明                                                                                                        |
-| :------- | :--- | :---------------------------------------------------------------------------------------------------------- |
-| `title`  | 是   | 文章显示的标题。                                                                                            |
-| `slug`   | 否   | 文章的 URL 尾缀，建议使用小写英文连字符格式。如果不填，系统可能会自动根据标题生成（中文标题建议手动指定）。 |
-| `status` | 是   | 默认为 `published`。如果不希望被看到请设为 `draft`。                                                        |
-| `tags`   | 是   | 列表格式。请尽量复用已有的标签体系。                                                                        |
-| `cover`  | 否   | 封面图片路径。可以是相对路径或 `uploads/` 路径。                                                            |
-| `allow_comments` | 否 | 是否允许评论。默认 `true`。                                                                                |
-| `type`   | 否   | 内容类型。通常为 `ARTICLE`。                                                                                |
-| `hidden` | 否   | 是否隐藏。系统字段，通常由后台管理。                                                                        |
-| `post_sort` | 否 | 内容排序方式。可选值：`title_asc`（标题升序）、`published_at_desc`（发布时间降序）等。系统字段。            |
-| `category_id` | 否 | 分类 ID。系统自动生成，用于关联文章到分类。                                                                |
-| `cover_media_id` | 否 | 封面媒体 ID。系统自动生成，用于关联封面图片。                                                              |
+| 字段 | 必需 | 不写时 / 说明 |
+| :--- | :--- | :--- |
+| `author` | **是** | 同步报错。用户名或用户 UUID |
+| `status` | 建议 | 默认 `draft`（仅后台可见）。只接受 `draft` / `published` |
+| `title` | 否 | 使用文件名（不含扩展名）。专栏系列建议带 `NN-` 编号前缀 |
+| `date` | 否 | 按同步时间发布；未来时间即定时发布。支持 `2026-12-01`、`2026-12-01 09:00:00`、`2026-12-01T09:00:00+08:00`，**不支持** `2026/12/01` |
+| `summary` / `excerpt` | 否 | 二者等价，写一个即可；不写则从正文自动截取。也可用 `description` |
+| `tags` | 否 | YAML 列表或逗号分隔字符串。尽量复用已有标签 |
+| `cover` | 否 | 相对于当前文件的图片路径（如 `assets/x.png`），会自动上传；也可写媒体库 UUID。**不要写不存在的裸文件名**，否则会按文件名模糊匹配到其他图片 |
+| `meta_title` / `meta_description` / `meta_keywords` | 否 | 可选的 SEO 字段 |
+| `is_featured` | 否 | 默认 `false`，是否首页推荐 |
+| `allow_comments` | 否 | 默认 `true` |
+| `use_server_rendering` | 否 | 默认 `true` |
+| `enable_jsx` | 否 | 默认 `false`；只有使用 JSX 组件时才设为 `true`，数学公式与 Mermaid 不需要 |
+| `slug` | 否（回填） | 由文件名生成（中文转拼音）并加随机后缀。修改会改变文章地址 |
+| `author_id` / `category` / `category_id` / `cover_media_id` | 回填 | 不要手写。移动文章到其他专栏时删除 `category` 与 `category_id` |
+
+`hidden`、`post_sort`、`sort`、`icon` 是专栏 `index.md` 的字段，写在文章里不起作用，见 `category-metadata` 技能。
 
 ## 分类索引（Category Index）的特殊处理
 
@@ -151,4 +147,4 @@ cover: "image.png" # 封面图路径 (可选)
 **解决方案**：
 1. 确保所有文章都已同步到数据库
 2. 检查链接格式是否为 `[text](./file.md)`
-3. 运行 `scripts/sync-posts.sh` 重新同步
+3. 在主仓库 `blog_fr` 中运行 `scripts/sync-posts.sh` 或在后台触发全量同步

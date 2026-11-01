@@ -1,2 +1,5 @@
 ideas/人间世
 ideas/三十题记
+
+# 本地 Claude Code 配置（含本机路径与数据库凭据，不提交）
+.claude/

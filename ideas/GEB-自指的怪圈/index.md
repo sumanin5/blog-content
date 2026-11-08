@@ -1,4 +1,5 @@
 ---
+slug: geb-zi-zhi-de-guai-quan
 category_id: 019c7b3d-4c18-7aa6-a293-17f1526ee7c5
 cover: media/cover.png
 hidden: false

@@ -1,4 +1,5 @@
 ---
+slug: ren-jian-shi
 category_id: 019c7bc5-9e00-7c3f-a4e5-082debcf100e
 cover: media/cover.png
 cover_media_id: 019c7bc5-9e21-72ab-9267-7fb199c86049

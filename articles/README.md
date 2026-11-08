@@ -6,10 +6,10 @@
 
 | 目录 | 名称 | 文章数 | 状态 |
 | --- | --- | --- | --- |
-| [fastapi-engineering-practice](fastapi-engineering-practice/index.md) | FastAPI 工程化实践 | 8 | 公开 |
-| [django-styleguide](django-styleguide/index.md) | Django 风格指南 (HackSoft) | 8 | 公开 |
-| [next-cache](next-cache/index.md) | Next.js 缓存机制全解析 | 6 | 公开 |
-| [tech](tech/index.md) | Tech | 1 | 隐藏（`hidden: true`） |
+| [fastapi-engineering-practice](FastAPI工程化实践/index.md) | FastAPI 工程化实践 | 8 | 公开 |
+| [django-styleguide](Django风格指南/index.md) | Django 风格指南 (HackSoft) | 8 | 公开 |
+| [next-cache](Next.js缓存机制/index.md) | Next.js 缓存机制全解析 | 6 | 公开 |
+| [tech](技术杂记/index.md) | Tech | 1 | 隐藏（`hidden: true`） |
 
 ## 本类型约定
 

@@ -17,10 +17,10 @@ description: 生成、校验和更新博客文章的 YAML Frontmatter 元数据�
 
 解析逻辑见主仓库 `backend/app/git_ops/components/metadata.py` 与 `processors/`。与仓库根目录 `AGENTS.md` 保持一致。
 
-1. **唯一必需字段是 `author`**：值为已存在的用户名（默认 `tomyi`）或用户 UUID。缺失或用户不存在时同步报错，文章不会导入。
+1. **author 和 slug 必需**：作者为已有用户名；slug 显式稳定、全仓库文章唯一，移动目录时保留。
 2. **`status` 不写默认是草稿**：只接受 `draft` / `published`（不区分大小写），其他值同步报错。要上线必须写 `status: published`。
 3. **其余字段都可选**，不写时的行为见下表。
-4. **后端回填字段不要手写**：`slug`、`author_id`、`category`、`category_id`、`cover_media_id` 由同步回填，推送后 `git pull` 获取。
+4. **单向导入**：后端不回填、不写文件、不推送。新文章不要添加数据库 ID；分类身份取自同目录 index.md 的显式 slug。
 5. **内容类型和专栏由目录决定**：`articles/<专栏>/` 或 `ideas/<专栏>/`，frontmatter 里的 `type` 不起作用，不用写。
 
 ## 最小模板（想法流常用）
@@ -28,6 +28,7 @@ description: 生成、校验和更新博客文章的 YAML Frontmatter 元数据�
 ```yaml
 ---
 author: tomyi
+slug: my-stable-article
 status: published
 ---
 ```
@@ -40,6 +41,7 @@ status: published
 ---
 title: "09-文章主标题"
 author: tomyi
+slug: my-stable-article
 status: published
 summary: "80–120 字的中文摘要，用于列表卡片与搜索结果。"
 tags:
@@ -63,14 +65,14 @@ is_featured: false
 | `date` | 否 | 按同步时间发布；未来时间即定时发布。支持 `2026-12-01`、`2026-12-01 09:00:00`、`2026-12-01T09:00:00+08:00`，**不支持** `2026/12/01` |
 | `summary` / `excerpt` | 否 | 二者等价，写一个即可；不写则从正文自动截取。也可用 `description` |
 | `tags` | 否 | YAML 列表或逗号分隔字符串。尽量复用已有标签 |
-| `cover` | 否 | 相对于当前文件的图片路径（如 `assets/x.png`），会自动上传；也可写媒体库 UUID。**不要写不存在的裸文件名**，否则会按文件名模糊匹配到其他图片 |
+| `cover` | 否 | 相对于当前文件的图片路径（如 `assets/x.png`），会自动上传；也可写媒体库 UUID。**不要写不存在的裸文件名**，不存在的源图片不会通过同名模糊匹配代替 |
 | `meta_title` / `meta_description` / `meta_keywords` | 否 | 可选的 SEO 字段 |
 | `is_featured` | 否 | 默认 `false`，是否首页推荐 |
 | `allow_comments` | 否 | 默认 `true` |
 | `use_server_rendering` | 否 | 默认 `true` |
 | `enable_jsx` | 否 | 默认 `false`；只有使用 JSX 组件时才设为 `true`，数学公式与 Mermaid 不需要 |
-| `slug` | 否（回填） | 由文件名生成（中文转拼音）并加随机后缀。修改会改变文章地址 |
-| `author_id` / `category` / `category_id` / `cover_media_id` | 回填 | 不要手写。移动文章到其他专栏时删除 `category` 与 `category_id` |
+| `slug` | **是** | 显式稳定 URL 标识，全仓库文章唯一，不回填 |
+| `author_id` / `category` / `category_id` / `cover_media_id` | 历史兼容 | 新文章使用作者名、分类索引 slug 与相对媒体路径；后端不回填 |
 
 `hidden`、`post_sort`、`sort`、`icon` 是专栏 `index.md` 的字段，写在文章里不起作用，见 `category-metadata` 技能。
 
@@ -81,8 +83,8 @@ is_featured: false
 每个分类目录下的 `index.md` 文件是分类索引，用来展示该分类的说明、覆盖图和内容组织。
 
 **示例路径**：
-- `articles/fastapi-engineering-practice/index.md`
-- `articles/django-styleguide/index.md`
+- `articles/FastAPI工程化实践/index.md`
+- `articles/Django风格指南/index.md`
 
 ### 分类索引中的链接处理
 
@@ -125,7 +127,7 @@ is_featured: false
 
 **优点**：
 - 链接在文件系统中有效，开发时易于验证
-- 系统会自动转换，无需手动维护 slug
+- 系统转换相对文章链接；作者必须显式维护稳定 slug
 - 即使重新组织目录结构，相对路径仍有效
 
 #### ❌ 不推荐方式：硬编码绝对 URL

@@ -1,4 +1,5 @@
 ---
+slug: django-styleguide
 category_id: 019c2769-763b-734d-873b-c0b734d830ab
 cover: cover.jpg
 cover_media_id: 019c2769-768c-7e37-927f-2a32d4ad30bb

@@ -1,4 +1,5 @@
 ---
+slug: next-cache
 category_id: 019c7b3d-46c4-7a8e-8a01-d2cef7bb5b9c
 cover: cover.png
 cover_media_id: 019c7b3d-48e3-7470-9252-8ee00d82b156

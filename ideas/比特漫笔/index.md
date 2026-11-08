@@ -1,4 +1,5 @@
 ---
+slug: bi-te-man-bi
 category_id: 019cc173-5ef7-711f-9878-ca220c90be7e
 cover: media/cover.png
 cover_media_id: 019cc173-5f0c-7990-b076-fb1ff0d48a5c

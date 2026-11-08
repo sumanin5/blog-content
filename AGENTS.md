@@ -1,15 +1,15 @@
 # AGENTS.md
 
-本仓库只存放 Blog FR 的文章内容。推送到 `main` 会通过 Webhook 立即同步到线上博客，**每次推送都等同于发布**。
+本仓库只存放 Blog FR 的文章内容。推送到配置的内容分支会通过 Webhook 请求导入；只有导入成功且状态为 `published` 的文章才会公开。完整操作示例见 README.md。
 
 字段的完整说明见 `.agent/skills/blog-post-frontmatter/SKILL.md` 与 `.agent/skills/category-metadata/SKILL.md`；本文件是上传时必须遵守的规则，冲突时以本文件为准。
 
 ## 1. 目录规则
 
 - 文章路径只能是 `articles/<专栏>/<文章>.md` 或 `ideas/<专栏>/<文章>.md`（`.mdx` 同理）。
-- **不要**在仓库根目录、`articles/`、`ideas/` 第一层或专栏的子目录里放 `.md` 笔记：除说明文件外，这些位置的 `.md` 也会被同步成文章（归入 `uncategorized`）。
+- **不要**在仓库根目录、`articles/`、`ideas/` 第一层或专栏的子目录里放 `.md` 笔记：除说明文件外，这些位置的 `.md` 会被严格校验拒绝。
 - 说明类文档只能使用这些文件名：`README`、`AGENTS`、`CLAUDE`、`LICENSE`、`CONTRIBUTING`、`CHANGELOG`。
-- **专栏目录名必须是小写英文加连字符**，例如 `fastapi-engineering-practice`。中文目录名会被转成拼音 slug；不要同时维护中文和拼音两套目录。历史重复目录已经整理，当前后端不会回写或新建源目录。专栏的中文名写在 `index.md` 的 `title` 里。
+- **专栏目录可用中文**，例如 `RL奥德赛`。分类地址只由 `index.md` 中显式的 `slug` 决定；目录改名不改变 URL。不要维护中文、拼音两套相同分类。
 
 ## 2. 新建专栏
 
@@ -18,6 +18,7 @@
 ```yaml
 ---
 title: FastAPI 工程化实践
+slug: fastapi-engineering-practice
 excerpt: 一句话介绍，显示在专栏列表和专栏页标题下方。
 icon: "⚡"
 cover: assets/fastapi-engineering-cover.png
@@ -51,7 +52,7 @@ hidden: false
 | `status` | 强烈建议 | **默认是草稿**，只在后台可见；只接受 `draft` / `published`，写其他值（如 `archived`）会报错 |
 | `date` | 可选 | 不写则按同步时间发布；写未来时间即定时发布 |
 | `title` | 可选 | 使用文件名（不含扩展名） |
-| `slug` | 可选 | 缺省由文件名和相对路径哈希稳定生成，不回填；需移动的文章应显式保留原 slug |
+| `slug` | **必需** | 稳定 URL 标识；全仓库文章不可重复，移动时保留；后端不回填 |
 | `summary` | 可选 | 从正文自动截取摘要；也可写 `description` |
 | `tags` | 可选 | 列表或逗号分隔字符串（`tags: FastAPI, Python`）均可 |
 
@@ -64,6 +65,7 @@ hidden: false
 ```yaml
 ---
 author: tomyi
+slug: my-stable-article
 status: published
 ---
 
@@ -78,6 +80,7 @@ status: published
 ---
 title: 09-FastAPI 后台任务该交给谁
 author: tomyi
+slug: my-stable-article
 status: published
 summary: 80–120 字的中文摘要，显示在列表卡片和搜索结果中。
 tags:
@@ -107,7 +110,7 @@ cover: assets/background-tasks-cover.png
 
 内容只从 Git 导入数据库。后端不回填 Frontmatter、不修改文件、不提交或推送 Git。
 
-- 新文章建议显式填写稳定 `slug`；不填时根据文件名和源路径生成，同一路径的结果稳定。
+- 每篇文章必须显式填写稳定 `slug`；分类也必须在 `index.md` 中填写 `slug`。不再依赖目录转拼音来决定地址。
 - 已有文章保留原 `slug`，移动同一分类的文章时也保留它，以便复用原文章记录。
 - 不要新增数据库专属的 `author_id`、`category_id`、`cover_media_id`、`icon_id`；使用作者名、分类目录和相对图片路径，便于重建数据库。
 - 历史 ID 不要批量删除；涉及冲突时先记录原值，再确定权威源文件。
@@ -116,6 +119,8 @@ cover: assets/background-tasks-cover.png
 
 ## 5. 图片
 
+- 文章 `cover` 与分类 `index.md` 的 `cover` 独立。文章封面用于列表、详情和分享预览；正文图片不会自动成为封面，也不自动继承分类封面。
+- 历史有效 `cover_media_id` 优先于 `cover`；替换本篇封面时移除旧封面 ID，再使用新相对路径。仅改图片字节不会自动重导所有引用文章，建议改图片名并同时更新 Markdown。
 - 图片放在专栏的 `assets/` 子目录，用**相对于当前 `.md` 文件的路径**引用：`cover: assets/xxx.png`、`![说明](assets/xxx.png)`。
 - **不要只写裸文件名**（`cover: cover.png`）而文件实际在子目录里：本地路径必须存在；后端按内容哈希或明确媒体引用解析，不会模糊选择同名图片。
 - 文件名带上专栏或文章前缀，避免 `cover.png`、`icon.svg` 这种全库重名的名字。
@@ -134,3 +139,11 @@ cover: assets/background-tasks-cover.png
 - 面向工程实践：先给结论，再讲问题和实现，最后讲取舍与边界。
 - 使用真实的代码、目录和流程；避免“最佳”“完美”“终极”等夸张表述。
 - 代码块标注语言；中文与英文、数字之间留空格。
+
+## 8. 提交前内容校验
+
+首次使用：`python -m pip install -r tools/requirements.txt`，再运行 `python tools/install-hooks.py`。
+手动校验：`python tools/content_contract.py`；检查待提交内容：追加 `--staged`。
+钩子检查完整暂存区；CI 和网站导入前使用相同校验器。缺少 slug、重复 slug/URL、保留路由冲突或分类索引缺失时拒绝提交/导入。
+README、AGENTS、CLAUDE 等说明文件不作为文章。修改它们仍会产生 push webhook，网站收到通知后忽略对应文件。
+本地钩子可被绕过，远端需将 CI 的 `Content contract` 设为 main 的必需合并检查；不要直接推送绕过检查。

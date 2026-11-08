@@ -1,4 +1,5 @@
 ---
+slug: san-shi-ti-ji
 category_id: 019c7bc5-9b6d-70c7-865c-bdef86dae951
 cover: media/cover.png
 cover_media_id: 019c7bc5-9b88-711e-a3d0-ff3a3b2788e4

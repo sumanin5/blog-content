@@ -1,4 +1,5 @@
 ---
+slug: fastapi-engineering-practice
 category_id: 019d359a-ec80-7ce3-a755-4a2b1ca21df4
 cover: fastapi2.png
 cover_media_id: 019d35a3-53fa-7d9b-ad68-964c0f81ddb2

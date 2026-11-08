@@ -1,4 +1,5 @@
 ---
+slug: rlao-de-sai
 category_id: 019c21dc-4f75-7cba-9cd6-18404be2b65d
 cover: media/rl_odyssey_cover.png
 cover_media_id: 019c21dc-5055-7539-8e57-9b3c5912bfa8

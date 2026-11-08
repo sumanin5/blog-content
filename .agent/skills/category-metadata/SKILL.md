@@ -22,14 +22,15 @@ description: 专门用于创建、校验和维护博客分类目录下的 index.
 - **Post Type 自动推导**:
   - 路径包含 `articles/` → `post_type: ARTICLES`
   - 路径包含 `ideas/` → `post_type: IDEAS`
-- **Slug 自动推导**: 由目录名生成。例如 `articles/tech-share/` 推导出 `slug: tech-share`。
-- **目录名必须用小写英文加连字符**：中文目录名会被转成拼音 slug，后端写回 `index.md` 时会另建一个拼音目录，造成重复目录（`ideas/人间世/` 与 `ideas/ren-jian-shi/` 即由此产生）。中文名写在 `title` 里。
+- **Slug 显式声明**：`index.md` 必须填写稳定的 `slug`，目录名不再决定分类 URL。
+- **目录可以使用中文**：中文目录供作者阅读，地址使用 index.md 的 slug；不得维护两套同一 slug 的目录。
 
 ### 2. Frontmatter 编写规范
 
 ```yaml
 ---
-# 所有字段均可选；建议至少写 title
+# slug 必需；建议填写中文 title
+slug: stable-category-slug
 title: "显示名称" # 不写则由目录 slug 生成（如 tech-share → Tech-Share）
 excerpt: "一句话简介" # 显示在专栏列表与专栏页标题下方
 hidden: false # 是否隐藏（默认 false）。映射至 is_active (hidden: true => is_active: false)
@@ -100,6 +101,6 @@ icon: "assets/icons/design.svg"
 ## Best Practices (最佳实践)
 
 1. **正文即描述**: 不要只写 Frontmatter，正文描述对于分类详情页的 SEO 和用户体验非常重要。
-2. **Slug 唯一性**: 虽然 Slug 是推导的，但请确保在同一 Post Type 下目录名不要冲突。
+2. **Slug 唯一性**：同一 post_type 的分类 slug 不得重复，提交前会统一检查。
 3. **Emoji 简化**: 推荐优先使用 Emoji 作为 `icon`，因为它渲染速度快且无需加载额外资源。
 4. **隐藏分类**: 对于正在筹备或不想公开的分类，使用 `hidden: true` 而非删除目录。

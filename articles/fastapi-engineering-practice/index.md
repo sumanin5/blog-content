@@ -37,4 +37,4 @@ FastAPI 入门很容易，但等项目真正长大——接口增多、团队扩
 - [05-让 FastAPI 接口更专业：文档契约、response_model 和模型组织](/posts/articles/docs-and-response-models-6ciafl)
 - [06-把错误处理做系统：分层、统一格式和全局收口](/posts/articles/error-handling-architecture-htv8a0)
 - [07-数据库别拖后腿：迁移命名、约束约定和 SQL 优先](/posts/articles/migrations-naming-and-sql-first-cu50vq)
-- [08-FastAPI 项目为什么要尽早上异步测试和 Ruff](\./08-testing-and-code-quality.md)
+- [08-FastAPI 项目为什么要尽早上异步测试和 Ruff](./08-testing-and-code-quality.md)

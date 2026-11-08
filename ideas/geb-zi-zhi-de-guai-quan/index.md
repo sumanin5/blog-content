@@ -1,8 +1,9 @@
 ---
 category_id: 019c7b3d-4c18-7aa6-a293-17f1526ee7c5
-cover: Gemini_Generated_Image_u70zqfu70zqfu70z.png
-cover_media_id: 019c7bd8-128c-7b27-a6c5-906978b8cf23
+cover: media/cover.png
 hidden: false
+icon: media/icon.svg
+icon_id: 019c7bc5-9b56-761e-940c-11b1af29fda1
 post_sort: published_at_desc
 title: GEB：自指的怪圈与意识的镜像
 ---

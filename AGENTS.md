@@ -9,7 +9,7 @@
 - 文章路径只能是 `articles/<专栏>/<文章>.md` 或 `ideas/<专栏>/<文章>.md`（`.mdx` 同理）。
 - **不要**在仓库根目录、`articles/`、`ideas/` 第一层或专栏的子目录里放 `.md` 笔记：除说明文件外，这些位置的 `.md` 也会被同步成文章（归入 `uncategorized`）。
 - 说明类文档只能使用这些文件名：`README`、`AGENTS`、`CLAUDE`、`LICENSE`、`CONTRIBUTING`、`CHANGELOG`。
-- **专栏目录名必须是小写英文加连字符**，例如 `fastapi-engineering-practice`。中文目录名会被转成拼音 slug，后端写回 `index.md` 时会另建一个拼音目录，造成重复专栏目录（`ideas/人间世/` 与 `ideas/ren-jian-shi/` 就是这样产生的）。专栏的中文名写在 `index.md` 的 `title` 里。
+- **专栏目录名必须是小写英文加连字符**，例如 `fastapi-engineering-practice`。中文目录名会被转成拼音 slug；不要同时维护中文和拼音两套目录。历史重复目录已经整理，当前后端不会回写或新建源目录。专栏的中文名写在 `index.md` 的 `title` 里。
 
 ## 2. 新建专栏
 
@@ -51,7 +51,7 @@ hidden: false
 | `status` | 强烈建议 | **默认是草稿**，只在后台可见；只接受 `draft` / `published`，写其他值（如 `archived`）会报错 |
 | `date` | 可选 | 不写则按同步时间发布；写未来时间即定时发布 |
 | `title` | 可选 | 使用文件名（不含扩展名） |
-| `slug` | 可选 | 由文件名生成并加随机后缀，回填到 frontmatter |
+| `slug` | 可选 | 缺省由文件名和相对路径哈希稳定生成，不回填；需移动的文章应显式保留原 slug |
 | `summary` | 可选 | 从正文自动截取摘要；也可写 `description` |
 | `tags` | 可选 | 列表或逗号分隔字符串（`tags: FastAPI, Python`）均可 |
 
@@ -103,24 +103,27 @@ cover: assets/background-tasks-cover.png
 - 只有用到 JSX 组件时才设 `enable_jsx: true`；数学公式、Mermaid 不需要。
 - 想让文章下线：改成 `status: draft`，不要删除文件。
 
-## 4. 后端回填字段：不要手写
+## 4. 身份字段与单向同步
 
-`slug`、`author_id`、`category`、`category_id`、`cover_media_id`、`icon_id` 由同步过程自动写回。
+内容只从 Git 导入数据库。后端不回填 Frontmatter、不修改文件、不提交或推送 Git。
 
-- 新文章**不要**写这些字段，推送后 `git pull` 拿到回填值。
-- 已有文章**不要**修改这些字段，否则文章会与线上记录脱钩（例如改 `slug` 会改变文章地址，旧链接失效）。
-- **移动文章到另一个专栏**：移动文件，同时删除 `category` 和 `category_id` 两行。`category_id` 优先于目录路径，不删的话文章仍属于原专栏。
+- 新文章建议显式填写稳定 `slug`；不填时根据文件名和源路径生成，同一路径的结果稳定。
+- 已有文章保留原 `slug`，移动同一分类的文章时也保留它，以便复用原文章记录。
+- 不要新增数据库专属的 `author_id`、`category_id`、`cover_media_id`、`icon_id`；使用作者名、分类目录和相对图片路径，便于重建数据库。
+- 历史 ID 不要批量删除；涉及冲突时先记录原值，再确定权威源文件。
+- 跨专栏移动时移除旧 `category` / `category_id`，让新路径决定分类。同一分类合并目录无需改变分类身份。
+- 后台编辑只修改数据库，后续 Git 导入可能覆盖；需要持久修改请编辑此仓库。
 
 ## 5. 图片
 
 - 图片放在专栏的 `assets/` 子目录，用**相对于当前 `.md` 文件的路径**引用：`cover: assets/xxx.png`、`![说明](assets/xxx.png)`。
-- **不要只写裸文件名**（`cover: cover.png`）而文件实际在子目录里：本地路径找不到时，后端会在媒体库里按文件名模糊搜索，可能挂上其他专栏的同名图片。
+- **不要只写裸文件名**（`cover: cover.png`）而文件实际在子目录里：本地路径必须存在；后端按内容哈希或明确媒体引用解析，不会模糊选择同名图片。
 - 文件名带上专栏或文章前缀，避免 `cover.png`、`icon.svg` 这种全库重名的名字。
 - 优先使用 `.png`、`.jpg`、`.webp`；单张图片控制在 1 MB 以内。封面建议横图，宽度不小于 1600px。
 
 ## 6. 提交规则
 
-- 修改前先 `git pull`；后端会推送 `chore: sync metadata from database [skip ci]` 提交。
+- 修改前先 `git pull`，获取其他作者的提交；网站不会产生回写提交。
 - 一次提交只做一件事，提交信息写清楚涉及的专栏或文章，例如 `feat(fastapi): 新增 09 后台任务`。
 - 不要 force push，不要改写已推送的历史，否则增量同步会失效。
 - 不要提交 `.claude/`（本地配置，含凭据）和 `.gitops_last_sync` 之外的同步状态文件。
